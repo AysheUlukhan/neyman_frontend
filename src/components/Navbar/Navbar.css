@@ -1,0 +1,20 @@
+@import url('../../index.css');
+nav {
+    .logo {
+        height: 100px;
+    }
+
+    li {
+        font-size: 18px;
+        transition: all .3s;
+        cursor: pointer;
+        
+    }
+
+    li:hover{
+        color: var(--medium-blue);
+    }
+   
+}
+
+

@@ -1,0 +1,25 @@
+.contact .contact-form{
+    background-color: var(--cultured);
+}
+
+.contact .contact-form input{
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid;
+    outline: none;
+    padding-bottom: 10px;
+}
+
+.contact .contact-form textarea{
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid;
+    outline: none;
+}
+
+.contact .contact-form button{
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    gap: 3px;
+}

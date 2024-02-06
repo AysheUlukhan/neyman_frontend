@@ -1,0 +1,31 @@
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="24" height="24" fill="none"/>
+<g id="01_Home Page" clip-path="url(#clip0_1005_2)">
+<rect width="1920" height="9621" transform="translate(-992 -38)" fill="none"/>
+<g id="Background">
+<rect id="Background_2" x="-992" y="-38" width="1920" height="9621" fill="none"/>
+<path id="BG Line" fill-rule="evenodd" clip-rule="evenodd" d="M-513 -38H-512V9050.95H-513V-38ZM-32 -38H-31V9050.95H-32V-38ZM449 -38H448V9050.95H449V-38Z" fill="#F5F5F5"/>
+</g>
+<g id="Header Section">
+<g id="Navigation Bar">
+<g id="Menu">
+<g id="Portfolio">
+<g id="Icon">
+<mask id="mask0_1005_2" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+<path id="Bounding box" d="M0 0H24V24H0V0Z" fill="white"/>
+</mask>
+<g mask="url(#mask0_1005_2)">
+<path id="Vector" d="M12 13.1722L16.95 8.22217L18.364 9.63617L12 16.0002L5.636 9.63617L7.05 8.22217L12 13.1722Z" fill="white"/>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+<defs>
+<clipPath id="clip0_1005_2">
+<rect width="1920" height="9621" fill="white" transform="translate(-992 -38)"/>
+</clipPath>
+</defs>
+</svg>
