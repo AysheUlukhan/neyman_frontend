@@ -32,7 +32,6 @@ const Navbar = () => {
                   to="services"
                   spy={true}
                   smooth={true}
-                  offset={50}
                   duration={700} className='fw-semibold nav-link'>Services</Link>
               </li>
               <li>

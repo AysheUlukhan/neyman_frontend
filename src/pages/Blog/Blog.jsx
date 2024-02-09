@@ -5,6 +5,7 @@ import { blogData } from '../../components/Api/BlogData/blogData';
 import { FaArrowLeft } from "react-icons/fa6";
 import { FaArrowRight } from "react-icons/fa6";
 import './Blog.css'
+import { NavLink } from 'react-router-dom';
 
 const Blog = () => {
 
@@ -48,7 +49,7 @@ const Blog = () => {
       <div className='d-flex justify-content-end py-5 search'>
         <input onChange={(e) => setSearch(e.target.value)} type='text' className='w-25 p-2 search' placeholder='Axtar' />
       </div>
-      <div className='row row-gap-4'>
+      <div className='row row-gap-4 blog-card'>
         {
 
           records.filter((post) => {
@@ -58,47 +59,31 @@ const Blog = () => {
           })
 
 
-            .map(post => 
-              <div className='col-xl-4 col-lg-4 col-md-6 col-sm-12' key={post.id}>
+            .map(post =>
+              <NavLink className='col-xl-4 col-lg-4 col-md-6 col-sm-12 cards' key={post.id} to={`/BlogDetail/${post.id}`}>
                 <img src={post.image} className="d-block mx-lg-auto img-fluid blogImg" />
-                <div className='py-2'>
+                <div className='py-2 '>
                   <span>{post.title} </span>| <span>{post.date}</span>
                 </div>
-                <h4>{post.content}</h4>
+                <h4 className='fw-bold'>{post.content}</h4>
 
-              </div>
+              </NavLink>
             )
         }
 
-        {/* <ul className='d-flex justify-content-center gap-4'>
-          <li className={`page-item ${currentPage === n ? 'active' : ''}`} key={i}>
-            <a href='#/' className='arrow-item' onClick={prePage}><FaArrowLeft /></a>
-          </li>
-          {
-              numbers.map((n, i) => (
-                <li className={`page-item ${currentPage === n ? 'active' : ''}`} key={i}>
-                  <a href='#/' className='page-link' onClick={() => changeCPage(n)}>{n}</a>
-                </li>
-              ))
-            }
-          <li className='page-item'>
-            <a href='#/' className='arrow-item' onClick={nextPage}><FaArrowRight /></a>
-          </li>
-        </ul> */}
-
         <ul className='d-flex justify-content-center gap-4'>
           <li className='page-item'>
-              <a href='#/' className='arrow-item' onClick={prePage}><FaArrowLeft /></a>
+            <a href='#/' className='arrow-item' onClick={prePage}><FaArrowLeft /></a>
           </li>
           {
             numbers.map((n, i) => (
               <li className={`page-item ${currentPage === n ? 'active' : ''}`} key={i}>
-                 <a href='#/' className='page-link' onClick={() => changeCPage(n)}>{n}</a>
+                <a href='#/' className='page-link' onClick={() => changeCPage(n)}>{n}</a>
               </li>
             ))
           }
           <li className='page-item'>
-              <a href='#/' className='arrow-item' onClick={nextPage}><FaArrowRight /></a>
+            <a href='#/' className='arrow-item' onClick={nextPage}><FaArrowRight /></a>
           </li>
         </ul>
 

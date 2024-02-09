@@ -10,9 +10,11 @@ import { FiArrowUpRight } from "react-icons/fi";
 import blogimg_1 from '../../assets/images/home-page-img/blog-img-1.png';
 import blogimg_2 from '../../assets/images/home-page-img/blog-img-2.png';
 import blogimg_3 from '../../assets/images/home-page-img/blog-img-3.png';
-import CommentSlider from '../../components/Commentcarousel/commentC'
+import CommentSlider from '../../components/Commentcarousel/commentC';
 
-
+import { TypeAnimation } from 'react-type-animation';
+import { motion } from 'framer-motion';
+import { fadeIn } from '../../variants';
 
 const Home = () => {
   const [selected, setSelected] = useState(null);
@@ -27,23 +29,63 @@ const Home = () => {
     <div className='home'>
       <section className="container px-4 py-5">
         <div className="row align-items-center justify-content-xl-between gap-16 py-5">
-          <div className="col-12 col-sm-12 col-xl-4 col-md-4 col-lg-4">
+          <motion.div
+            variants={fadeIn('right', 0.5)}
+            initial='hidden'
+            whileInView={'show'}
+            viewport={{ once: false, amount: 0.7 }}
+            className="col-12 col-sm-12 col-xl-4 col-md-4 col-lg-4">
             <img src={heroimg} className="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" loading="lazy" />
-          </div>
-          <div className="col-xl-6 col-md-7 col-lg-7">
-            <p className=" fw-medium fs-18 text">Our goal is to make it as easy as possible for you to walk away with the solution that suits your needs.</p>
-          </div>
-          <div className='text-center'>
-            <h4 className='fs-96 text-black md-fs-48 hero-text'>We Work On <br className='d-none d-xl-block d-xxl-block' /> Delivering Unique <br className='d-none d-xl-block d-xxl-block' /> Visual Solutions</h4>
-          </div>
-          <div className="col-xl-6 col-md-7 col-lg-7">
-            <p className=" fw-medium fs-18 text ">Our goal is to make it as easy as possible for you to walk away with the solution that suits your needs.</p>
-          </div>
-          <div className="col-12 col-sm-12 col-xl-4 col-md-4 col-lg-4">
+          </motion.div>
+          <motion.div
+            variants={fadeIn('left', 0.5)}
+            initial='hidden'
+            whileInView={'show'}
+            viewport={{ once: false, amount: 0.7 }}
+            className="col-xl-6 col-md-7 col-lg-7">
+            <p className=" fw-medium fs-18 text">Məqsədimiz ehtiyaclarınıza uyğun həll yolu ilə uzaqlaşmanızı mümkün qədər asanlaşdırmaqdır.</p>
+          </motion.div>
+          <motion.div
+            variants={fadeIn('up', 0.5)}
+            initial='hidden'
+            whileInView={'show'}
+            viewport={{ once: false, amount: 0.7 }}
+            className='text-center'>
+            <h4 className='fs-96 text-black md-fs-48 hero-text'>Biz
+              <span className='ms-4'>
 
+                <TypeAnimation sequence={
+                  [
+                    'Sadə',
+                    2000,
+                    'Sərfəli',
+                    2000,
+                    'Sürətli',
+                    2000
+                  ]}
+                  speed={50}
+                  repeat={Infinity}
+
+                />
+              </span>
+              <br className='d-none d-xl-block d-xxl-block' /> Həllərin Çatdırılması <br className='d-none d-xl-block d-xxl-block' /> üzərində işləyirik</h4>
+          </motion.div>
+          <motion.div
+            variants={fadeIn('right', 0.5)}
+            initial='hidden'
+            whileInView={'show'}
+            viewport={{ once: false, amount: 0.7 }}
+            className="col-xl-6 col-md-7 col-lg-7">
+            <p className=" fw-medium fs-18 text ">Müştərilərimizin hər biri ilə biz yaradıcı problemlərin həlli üçün dərin ehtiras yaradırıq - bunu çatdırırıq.</p>
+          </motion.div>
+          <motion.div
+            variants={fadeIn('left', 0.5)}
+            initial='hidden'
+            whileInView={'show'}
+            viewport={{ once: false, amount: 0.7 }}
+            className="col-12 col-sm-12 col-xl-4 col-md-4 col-lg-4">
             <img src={heroimg} className="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" loading="lazy" />
-
-          </div>
+          </motion.div>
         </div>
       </section>
 
@@ -53,14 +95,19 @@ const Home = () => {
       <section className='benefit'>
         <div className="container px-4 py-5">
           <div className="row g-5 py-5">
-            <div className="col-lg-6">
+            <motion.div
+              variants={fadeIn('right', 0.5)}
+              initial='hidden'
+              whileInView={'show'}
+              viewport={{ once: false, amount: 0.7 }}
+              className="col-lg-6">
               <div className='benefit-head'>
                 <p className='fs-18 mb-3'>FAYDALARIMIZ</p>
                 <h4 className="lh-1 fs-48 mb-3">Biznesiniz üçün gəlir artımının kilidini açın</h4>
               </div>
               <div className='wrapper'>
                 <div className='accordion'>
-                  {accordionData.map((item, i)  => (
+                  {accordionData.map((item, i) => (
                     <div className='item' key={item.id}>
                       <div className='title d-flex align-items-center gap-2' onClick={() => toogle(i)}>
                         <span>{selected === i ? <FaMinus className='fs-22' /> : <FaPlus className='fs-22' />}</span>
@@ -74,10 +121,15 @@ const Home = () => {
                 </div>
               </div>
 
-            </div>
-            <div className="col-sm-12 col-lg-6">
+            </motion.div>
+            <motion.div
+              variants={fadeIn('left', 0.5)}
+              initial='hidden'
+              whileInView={'show'}
+              viewport={{ once: false, amount: 0.7 }}
+              className="col-sm-12 col-lg-6">
               <img src={ourbenefits} class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" loading="lazy" />
-            </div>
+            </motion.div>
 
           </div>
         </div>
@@ -86,12 +138,17 @@ const Home = () => {
         <img src={sectionshap} class="d-block mx-lg-auto img-fluid" />
       </section>
 
-      <section id='services' className='services'>
-        <div className='text-center py-5'>
+      <motion.section
+        variants={fadeIn('down', 0.5)}
+        initial='hidden'
+        whileInView={'show'}
+        viewport={{ once: false, amount: 0.7 }}
+        id='services' className='services py-5'>
+        <div className='text-center '>
           <h4 className='fs-18'>SİZİN ÜÇÜN TƏKLİF EDİRİK</h4>
         </div>
         <div className='container'>
-          <div className=' d-flex justify-content-center align-items-center gap-3 flex-wrap fs-48 text-black'>
+          <div className='d-flex justify-content-center align-items-center gap-3 flex-wrap fs-48 text-black'>
             <a href='#/' className='text-decoration-none text-black' ><h4 className='fs-48'>Rəqəmsal Marketinq</h4></a> /
             <a href='#/' className='text-decoration-none text-black'><h4 className='fs-48'>İstifadəçi təcrübəsi</h4></a> /
             <a href='#/' className='text-decoration-none text-black'><h4 className='fs-48'>İnkişaf</h4></a> /
@@ -102,13 +159,18 @@ const Home = () => {
             <a href='#/' className='text-decoration-none text-black'><h4 className='fs-48'>Şəkil</h4></a>
           </div>
         </div>
-      </section>
+      </motion.section>
       <section className='container'>
         <img src={sectionshap} class="d-block mx-lg-auto img-fluid" />
       </section>
-      <section>
+      <motion.section
+      variants={fadeIn('up', 0.5)}
+      initial='hidden'
+      whileInView={'show'}
+      viewport={{ once: false, amount: 0.7 }}
+      >
         <CommentSlider />
-      </section>
+      </motion.section>
       <section className='container'>
         <img src={sectionshap} class="d-block mx-lg-auto img-fluid" />
       </section>
@@ -189,7 +251,7 @@ const Home = () => {
             <li><a href='#/'>İnkişaf</a></li> */}
           </ul>
         </div>
-        <hr/>
+        <hr />
       </section>
     </div>
   )

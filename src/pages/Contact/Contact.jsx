@@ -9,14 +9,14 @@ const Contact = () => {
     <div className='container contact'>
       <div className='contact-head pt-5'>
         <p className='fs-18'>ƏLAQƏ</p>
-        <h4 className='fs-48 pt-3'>Biz həmişə yeni istedadlı insanların axtarışındayıq. Komandamıza qoşulun.</h4>
+        <h4 className='fs-48 pt-3 contact-head-text'>Biz həmişə yeni istedadlı insanların axtarışındayıq. Komandamıza qoşulun.</h4>
         <img src={contact_hero} alt='contact' className="d-block img-fluid py-5" />
       </div>
       <div >
         <img src={sectionshap} alt='section shap' className="d-block mx-lg-auto img-fluid" />
       </div>
       <div className='row pt-5'>
-        <div className='col-xl-6'>
+        <div className='col-xl-6 col-lg-6 col-sm-12 col-12'>
           <h4 className='fs-36'>Gəlin Birgə İşləməyə Başlayaq. Bizimlə əlaqə saxlayın!</h4>
           <p className='fs-18'>Bu gün işçilərin rifah ehtiyaclarını müzakirə etmək üçün əlaqə saxlayın. Zəhmət olmasa bizə zəng edin, e-poçt göndərin.</p>
           <div className='py-5'>
@@ -34,7 +34,7 @@ const Contact = () => {
             </div>
           </div>
         </div>
-        <div className='col-xl-6'>
+        <div className='col-xl-6 col-lg-6 col-sm-12 col-12'>
           <div className='contact-form p-5'>
             <div className='pb-4'>
               <h4 className='fs-36 font-bold '>Bizə bir xətt buraxın</h4>
@@ -54,7 +54,7 @@ const Contact = () => {
               </div>
             </form>
             <div>
-              <button>GÖNDƏR <FiArrowUpRight/></button>
+              <button>GÖNDƏR <FiArrowUpRight className='fs-20'/></button>
             </div>
           </div>
         </div>

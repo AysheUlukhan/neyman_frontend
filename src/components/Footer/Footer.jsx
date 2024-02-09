@@ -31,7 +31,7 @@ const Footer = () => {
                 <h5 className='mb-3'>Faydalı Linklər</h5>
                 <p className='mb-3'><NavLink>Layihələrimiz</NavLink></p>
                 <p className='mb-3'><NavLink>Qiymətlər</NavLink></p>
-                <p><NavLink>Faq</NavLink></p>
+                <p><NavLink to='/Faq'>Faq</NavLink></p>
               </div>
             </div>
             <div className='col-lg-3 col-sm-6 mt-3'>

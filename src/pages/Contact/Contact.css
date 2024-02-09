@@ -21,5 +21,19 @@
     background-color: transparent;
     display: flex;
     align-items: center;
-    gap: 3px;
+    gap: 4px;
+    padding: 18px 58px;
+    border: none;
+    border: 1px solid black;
+    margin-top: 10px;
+}
+
+@media (max-width:540px) {
+    .contact h4{
+        font-size: 20px;
+    }
+
+    .contact .contact-form{
+        padding: 15px !important;
+    }
 }

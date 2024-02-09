@@ -14,7 +14,8 @@ export const blogData = [
         image: blog_1,
         title: 'DESIGN',
         date: '20 DEC 2023',
-        content: 'Best 15 App for Digital Transformation'
+        content: 'Best 15 App for Digital Transformation',
+        text: '1. Proin fermentum enim orci enim orci quis elementum. Lacus porta mi duis vitae neque suspendisse. Dignissim eget leo fermentum odio amet nulla dui neque. Integer at cras purus massa orci viverra. Et viverra mauris auctor commodo adipiscing amet elementum suscipit. Tincidunt sit eget augue eu tortor libero aliquam velit. At diam vel purus ac tortor adipiscing quis consequat vel. Consequat quis tortor mauris vulputate purus.'
     },
 
     {
@@ -22,7 +23,8 @@ export const blogData = [
         image: blog_2,
         title: 'DEVELOPMENT',
         date: '20 DEC 2023',
-        content: 'What is SEO?'
+        content: 'What is SEO?',
+        text: '2. Proin fermentum enim orci enim orci quis elementum. Lacus porta mi duis vitae neque suspendisse. Dignissim eget leo fermentum odio amet nulla dui neque. Integer at cras purus massa orci viverra. Et viverra mauris auctor commodo adipiscing amet elementum suscipit. Tincidunt sit eget augue eu tortor libero aliquam velit. At diam vel purus ac tortor adipiscing quis consequat vel. Consequat quis tortor mauris vulputate purus.'
     },
 
     {
@@ -30,7 +32,8 @@ export const blogData = [
         image: blog_3,
         title: 'DESIGN ',
         date: '20 DEC 2023',
-        content: 'Top Web Design Tools & Apps'
+        content: 'Top Web Design Tools & Apps',
+        text: '3. Proin fermentum enim orci enim orci quis elementum. Lacus porta mi duis vitae neque suspendisse. Dignissim eget leo fermentum odio amet nulla dui neque. Integer at cras purus massa orci viverra. Et viverra mauris auctor commodo adipiscing amet elementum suscipit. Tincidunt sit eget augue eu tortor libero aliquam velit. At diam vel purus ac tortor adipiscing quis consequat vel. Consequat quis tortor mauris vulputate purus.'
     },
 
     {
@@ -38,7 +41,8 @@ export const blogData = [
         image: blog_4,
         title: 'DEVELOPMENT',
         date: '20 DEC 2023',
-        content: 'The New Way to Grow Your Business'
+        content: 'The New Way to Grow Your Business',
+        text: '4. Proin fermentum enim orci enim orci quis elementum. Lacus porta mi duis vitae neque suspendisse. Dignissim eget leo fermentum odio amet nulla dui neque. Integer at cras purus massa orci viverra. Et viverra mauris auctor commodo adipiscing amet elementum suscipit. Tincidunt sit eget augue eu tortor libero aliquam velit. At diam vel purus ac tortor adipiscing quis consequat vel. Consequat quis tortor mauris vulputate purus.'
     },
 
     {
@@ -46,7 +50,8 @@ export const blogData = [
         image: blog_5,
         title: 'DESIGN',
         date: '20 DEC 2023',
-        content: 'Do I need a Marketing Agency?'
+        content: 'Do I need a Marketing Agency?',
+        text: '5. Proin fermentum enim orci enim orci quis elementum. Lacus porta mi duis vitae neque suspendisse. Dignissim eget leo fermentum odio amet nulla dui neque. Integer at cras purus massa orci viverra. Et viverra mauris auctor commodo adipiscing amet elementum suscipit. Tincidunt sit eget augue eu tortor libero aliquam velit. At diam vel purus ac tortor adipiscing quis consequat vel. Consequat quis tortor mauris vulputate purus.'
     },
 
     {
@@ -54,7 +59,8 @@ export const blogData = [
         image: blog_6,
         title: 'DEVELOPMENT',
         date: '20 DEC 2023',
-        content: 'Amazing Web Design Process'
+        content: 'Amazing Web Design Process',
+        text: '6. Proin fermentum enim orci enim orci quis elementum. Lacus porta mi duis vitae neque suspendisse. Dignissim eget leo fermentum odio amet nulla dui neque. Integer at cras purus massa orci viverra. Et viverra mauris auctor commodo adipiscing amet elementum suscipit. Tincidunt sit eget augue eu tortor libero aliquam velit. At diam vel purus ac tortor adipiscing quis consequat vel. Consequat quis tortor mauris vulputate purus.'
     },
 
 
@@ -63,7 +69,8 @@ export const blogData = [
         image: blog_7,
         title: 'DESIGN',
         date: '20 DEC 2023',
-        content: 'Top 10 Car Rental iOS App?'
+        content: 'Top 10 Car Rental iOS App?',
+        text: '7. Proin fermentum enim orci enim orci quis elementum. Lacus porta mi duis vitae neque suspendisse. Dignissim eget leo fermentum odio amet nulla dui neque. Integer at cras purus massa orci viverra. Et viverra mauris auctor commodo adipiscing amet elementum suscipit. Tincidunt sit eget augue eu tortor libero aliquam velit. At diam vel purus ac tortor adipiscing quis consequat vel. Consequat quis tortor mauris vulputate purus.'
     },
 
 
@@ -72,7 +79,8 @@ export const blogData = [
         image: blog_8,
         title: 'DEVELOPMENT',
         date: '20 DEC 2023',
-        content: 'Best Development Process For Projects.'
+        content: 'Best Development Process For Projects.',
+        text: '8. Proin fermentum enim orci enim orci quis elementum. Lacus porta mi duis vitae neque suspendisse. Dignissim eget leo fermentum odio amet nulla dui neque. Integer at cras purus massa orci viverra. Et viverra mauris auctor commodo adipiscing amet elementum suscipit. Tincidunt sit eget augue eu tortor libero aliquam velit. At diam vel purus ac tortor adipiscing quis consequat vel. Consequat quis tortor mauris vulputate purus.'
     },
 
     {
@@ -80,7 +88,8 @@ export const blogData = [
         image: blog_9,
         title: 'DEVELOPMENT',
         date: '20 DEC 2023',
-        content: 'Crypto Wallet Connet With Website'
+        content: 'Crypto Wallet Connet With Website',
+        text: '9. Proin fermentum enim orci enim orci quis elementum. Lacus porta mi duis vitae neque suspendisse. Dignissim eget leo fermentum odio amet nulla dui neque. Integer at cras purus massa orci viverra. Et viverra mauris auctor commodo adipiscing amet elementum suscipit. Tincidunt sit eget augue eu tortor libero aliquam velit. At diam vel purus ac tortor adipiscing quis consequat vel. Consequat quis tortor mauris vulputate purus.'
     },
 
     {
@@ -88,7 +97,8 @@ export const blogData = [
         image: blog_9,
         title: 'DEVELOPMENT',
         date: '20 DEC 2023',
-        content: 'Crypto Wallet Connet With Website'
+        content: 'Crypto Wallet Connet With Website',
+        text: '10. Proin fermentum enim orci enim orci quis elementum. Lacus porta mi duis vitae neque suspendisse. Dignissim eget leo fermentum odio amet nulla dui neque. Integer at cras purus massa orci viverra. Et viverra mauris auctor commodo adipiscing amet elementum suscipit. Tincidunt sit eget augue eu tortor libero aliquam velit. At diam vel purus ac tortor adipiscing quis consequat vel. Consequat quis tortor mauris vulputate purus.'
     },
 
     {
@@ -96,7 +106,8 @@ export const blogData = [
         image: blog_9,
         title: 'DEVELOPMENT',
         date: '20 DEC 2023',
-        content: 'Crypto Wallet Connet With Website'
+        content: 'Crypto Wallet Connet With Website',
+        text: '11. Proin fermentum enim orci enim orci quis elementum. Lacus porta mi duis vitae neque suspendisse. Dignissim eget leo fermentum odio amet nulla dui neque. Integer at cras purus massa orci viverra. Et viverra mauris auctor commodo adipiscing amet elementum suscipit. Tincidunt sit eget augue eu tortor libero aliquam velit. At diam vel purus ac tortor adipiscing quis consequat vel. Consequat quis tortor mauris vulputate purus.'
     },
 
 ]
