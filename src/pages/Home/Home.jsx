@@ -11,10 +11,12 @@ import blogimg_1 from '../../assets/images/home-page-img/blog-img-1.png';
 import blogimg_2 from '../../assets/images/home-page-img/blog-img-2.png';
 import blogimg_3 from '../../assets/images/home-page-img/blog-img-3.png';
 import CommentSlider from '../../components/Commentcarousel/commentC';
+import { servicesData } from '../../components/Api/ServicesData/servicesData';
 
 import { TypeAnimation } from 'react-type-animation';
-import { motion } from 'framer-motion';
-import { fadeIn } from '../../variants';
+import { NavLink } from 'react-router-dom';
+// import { motion } from 'framer-motion';
+// import { fadeIn } from '../../variants';
 
 const Home = () => {
   const [selected, setSelected] = useState(null);
@@ -29,31 +31,30 @@ const Home = () => {
     <div className='home'>
       <section className="container px-4 py-5">
         <div className="row align-items-center justify-content-xl-between gap-16 py-5">
-          <motion.div
-            variants={fadeIn('right', 0.5)}
-            initial='hidden'
-            whileInView={'show'}
-            viewport={{ once: false, amount: 0.7 }}
+          <div
+            // variants={fadeIn('right', 0.5)}
+            // initial='hidden'
+            // whileInView={'show'}
+            // viewport={{ once: false, amount: 0.7 }}
             className="col-12 col-sm-12 col-xl-4 col-md-4 col-lg-4">
             <img src={heroimg} className="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" loading="lazy" />
-          </motion.div>
-          <motion.div
-            variants={fadeIn('left', 0.5)}
-            initial='hidden'
-            whileInView={'show'}
-            viewport={{ once: false, amount: 0.7 }}
+          </div>
+          <div
+            // variants={fadeIn('left', 0.5)}
+            // initial='hidden'
+            // whileInView={'show'}
+            // viewport={{ once: false, amount: 0.7 }}
             className="col-xl-6 col-md-7 col-lg-7">
             <p className=" fw-medium fs-18 text">Məqsədimiz ehtiyaclarınıza uyğun həll yolu ilə uzaqlaşmanızı mümkün qədər asanlaşdırmaqdır.</p>
-          </motion.div>
-          <motion.div
-            variants={fadeIn('up', 0.5)}
-            initial='hidden'
-            whileInView={'show'}
-            viewport={{ once: false, amount: 0.7 }}
+          </div>
+          <div
+            // variants={fadeIn('up', 0.5)}
+            // initial='hidden'
+            // whileInView={'show'}
+            // viewport={{ once: false, amount: 0.7 }}
             className='text-center'>
             <h4 className='fs-96 text-black md-fs-48 hero-text'>Biz
               <span className='ms-4'>
-
                 <TypeAnimation sequence={
                   [
                     'Sadə',
@@ -67,39 +68,40 @@ const Home = () => {
                   repeat={Infinity}
 
                 />
+                <br className='d-block d-xl-none d-xxl-none'/>
               </span>
               <br className='d-none d-xl-block d-xxl-block' /> Həllərin Çatdırılması <br className='d-none d-xl-block d-xxl-block' /> üzərində işləyirik</h4>
-          </motion.div>
-          <motion.div
-            variants={fadeIn('right', 0.5)}
-            initial='hidden'
-            whileInView={'show'}
-            viewport={{ once: false, amount: 0.7 }}
+          </div>
+          <div
+            // variants={fadeIn('right', 0.5)}
+            // initial='hidden'
+            // whileInView={'show'}
+            // viewport={{ once: false, amount: 0.7 }}
             className="col-xl-6 col-md-7 col-lg-7">
             <p className=" fw-medium fs-18 text ">Müştərilərimizin hər biri ilə biz yaradıcı problemlərin həlli üçün dərin ehtiras yaradırıq - bunu çatdırırıq.</p>
-          </motion.div>
-          <motion.div
-            variants={fadeIn('left', 0.5)}
-            initial='hidden'
-            whileInView={'show'}
-            viewport={{ once: false, amount: 0.7 }}
+          </div>
+          <div
+            // variants={fadeIn('left', 0.5)}
+            // initial='hidden'
+            // whileInView={'show'}
+            // viewport={{ once: false, amount: 0.7 }}
             className="col-12 col-sm-12 col-xl-4 col-md-4 col-lg-4">
             <img src={heroimg} className="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" loading="lazy" />
-          </motion.div>
+          </div>
         </div>
       </section>
 
       <section className='container'>
-        <img src={sectionshap} class="d-block mx-lg-auto img-fluid" />
+        <img src={sectionshap} className="d-block mx-lg-auto img-fluid" />
       </section>
       <section className='benefit'>
         <div className="container px-4 py-5">
           <div className="row g-5 py-5">
-            <motion.div
-              variants={fadeIn('right', 0.5)}
-              initial='hidden'
-              whileInView={'show'}
-              viewport={{ once: false, amount: 0.7 }}
+            <div
+              // variants={fadeIn('right', 0.5)}
+              // initial='hidden'
+              // whileInView={'show'}
+              // viewport={{ once: false, amount: 0.7 }}
               className="col-lg-6">
               <div className='benefit-head'>
                 <p className='fs-18 mb-3'>FAYDALARIMIZ</p>
@@ -121,58 +123,65 @@ const Home = () => {
                 </div>
               </div>
 
-            </motion.div>
-            <motion.div
-              variants={fadeIn('left', 0.5)}
-              initial='hidden'
-              whileInView={'show'}
-              viewport={{ once: false, amount: 0.7 }}
+            </div>
+            <div
+              // variants={fadeIn('left', 0.5)}
+              // initial='hidden'
+              // whileInView={'show'}
+              // viewport={{ once: false, amount: 0.7 }}
               className="col-sm-12 col-lg-6">
-              <img src={ourbenefits} class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" loading="lazy" />
-            </motion.div>
+              <img src={ourbenefits} className="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" loading="lazy" />
+            </div>
 
           </div>
         </div>
       </section>
       <section className=''>
-        <img src={sectionshap} class="d-block mx-lg-auto img-fluid" />
+        <img src={sectionshap} className="d-block mx-lg-auto img-fluid" />
       </section>
 
-      <motion.section
-        variants={fadeIn('down', 0.5)}
-        initial='hidden'
-        whileInView={'show'}
-        viewport={{ once: false, amount: 0.7 }}
+      <section
+        // variants={fadeIn('down', 0.5)}
+        // initial='hidden'
+        // whileInView={'show'}
+        // viewport={{ once: false, amount: 0.7 }}
         id='services' className='services py-5'>
         <div className='text-center '>
           <h4 className='fs-18'>SİZİN ÜÇÜN TƏKLİF EDİRİK</h4>
         </div>
         <div className='container'>
+          
           <div className='d-flex justify-content-center align-items-center gap-3 flex-wrap fs-48 text-black'>
-            <a href='#/' className='text-decoration-none text-black' ><h4 className='fs-48'>Rəqəmsal Marketinq</h4></a> /
+            {
+              servicesData.map((item)=>(
+                <NavLink className='text-decoration-none'  key={item.id} to={`/ServicesDetail/${item.id}`}>
+                  <a href='#/' className='text-decoration-none text-black' ><h4 className='fs-48'>{item.title} /</h4></a>
+                </NavLink> 
+              ))}
+            {/* <a href='#/' className='text-decoration-none text-black' ><h4 className='fs-48'>Rəqəmsal Marketinq</h4></a> /
             <a href='#/' className='text-decoration-none text-black'><h4 className='fs-48'>İstifadəçi təcrübəsi</h4></a> /
             <a href='#/' className='text-decoration-none text-black'><h4 className='fs-48'>İnkişaf</h4></a> /
             <a href='#/' className='text-decoration-none text-black'><h4 className='fs-48'>Brendləşmə</h4></a> /
             <a href='#/' className='text-decoration-none text-black'><h4 className='fs-48'>Mobil Proqram</h4></a> /
             <a href='#/' className='text-decoration-none text-black'><h4 className='fs-48'>İllüstrasiyalar</h4></a> /
             <a href='#/' className='text-decoration-none text-black'><h4 className='fs-48'>Proqram Dizaynı</h4></a> /
-            <a href='#/' className='text-decoration-none text-black'><h4 className='fs-48'>Şəkil</h4></a>
+            <a href='#/' className='text-decoration-none text-black'><h4 className='fs-48'>Şəkil</h4></a> */}
           </div>
         </div>
-      </motion.section>
-      <section className='container'>
-        <img src={sectionshap} class="d-block mx-lg-auto img-fluid" />
       </section>
-      <motion.section
-      variants={fadeIn('up', 0.5)}
-      initial='hidden'
-      whileInView={'show'}
-      viewport={{ once: false, amount: 0.7 }}
+      <section className='container'>
+        <img src={sectionshap} className="d-block mx-lg-auto img-fluid" />
+      </section>
+      <section
+      // variants={fadeIn('up', 0.5)}
+      // initial='hidden'
+      // whileInView={'show'}
+      // viewport={{ once: false, amount: 0.7 }}
       >
         <CommentSlider />
-      </motion.section>
+      </section>
       <section className='container'>
-        <img src={sectionshap} class="d-block mx-lg-auto img-fluid" />
+        <img src={sectionshap} className="d-block mx-lg-auto img-fluid" />
       </section>
       <section className='home-blog'>
         <div className='container py-5'>
@@ -192,7 +201,7 @@ const Home = () => {
                   <p className='card-text'>20 dekabr 2022-ci il | İNKİŞAF</p>
                   <h3 className='card-title '>Siz hələ də rəqəmsal alətlərdən istifadə etmirsiniz?</h3>
                 </div>
-                <img src={blogimg_1} alt='blog-img' class="d-block w-100 img-fluid" />
+                <img src={blogimg_1} alt='blog-img' className="d-block w-100 img-fluid" />
                 <div className='p-30 border blog-card-end'>
                   <a className='d-flex align-items-center gap-2 text-decoration-none'>DAHA ÇOX OXU <FiArrowUpRight className='fs-22 right-btn' /></a>
                 </div>
@@ -205,7 +214,7 @@ const Home = () => {
                   <p className='card-text'>20 dekabr 2022-ci il | BİZNES</p>
                   <h3 className='card-title'>Onlayn biznes üçün rəqəmsal marketinq</h3>
                 </div>
-                <img src={blogimg_2} alt='blog-img' class="d-block w-100 img-fluid" />
+                <img src={blogimg_2} alt='blog-img' className="d-block w-100 img-fluid" />
                 <div className='p-30 border blog-card-end'>
                   <a className='d-flex align-items-center gap-2 text-decoration-none'>DAHA ÇOX OXU <FiArrowUpRight className='fs-22 right-btn' /></a>
                 </div>
@@ -218,7 +227,7 @@ const Home = () => {
                   <p className='card-text'>20 dekabr 2022-ci il | DİZAYN</p>
                   <h3 className='card-title'>Çətinlikləri Fürsətlərə çevirin</h3>
                 </div>
-                <img src={blogimg_3} alt='blog-img' class="d-block w-100 img-fluid" />
+                <img src={blogimg_3} alt='blog-img' className="d-block w-100 img-fluid" />
                 <div className='p-30 border blog-card-end'>
                   <a className='d-flex align-items-center gap-2 text-decoration-none'>DAHA ÇOX OXU <FiArrowUpRight className='fs-22 right-btn' /></a>
                 </div>
@@ -247,8 +256,7 @@ const Home = () => {
             <li><a href='#/'>İnkişaf</a></li>
             <li><a href='#/'>Rəqəmsal Marketinq</a></li>
             <li><a href='#/'>İstifadəçi Təcrübəsi Dizaynı</a></li>
-            {/* <li><a href='#/'>Yaradıcı Dizayn</a></li>
-            <li><a href='#/'>İnkişaf</a></li> */}
+
           </ul>
         </div>
         <hr />

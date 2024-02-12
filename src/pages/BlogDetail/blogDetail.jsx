@@ -15,11 +15,11 @@ const blogDetail = () => {
         <a href='/Blog' className='d-flex align-items-center gap-1 '>BLOQ <LuChevronRight /></a>
         <p>BLOQ DETAIL</p>
       </div>
-      <div className='pt-40'>
+      {/* <div className='pt-40'>
         <img src={sectionshap} alt='section shap' className="d-block mx-lg-auto img-fluid" />
-      </div>
-      <div className="row g-5 py-5">
-        <div className="col-md-8">
+      </div> */}
+      <div className="row g-lg-5 py-5">
+        <div className="col-lg-8 col-sm-12 col-12">
 
           <article className="blog-post">
             <img src={myDetailedBlog.image} className='w-100 h-25 d-block mx-lg-auto img-fluid' alt="detailblog" />
@@ -32,7 +32,7 @@ const blogDetail = () => {
 
         </div>
 
-        <div className="col-md-4 left-related-posts">
+        <div className="col-lg-4 col-sm-12 col-12 left-related-posts">
           <div className="sticky-top">
 
             <div>

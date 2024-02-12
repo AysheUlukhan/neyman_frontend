@@ -10,6 +10,8 @@ import Footer from "./components/Footer/Footer"
 import BlogDetail from "./pages/BlogDetail/blogDetail"
 import Faq from "./pages/Faq/Faq"
 import ServicesDetail from "./pages/ServicesDetail/servicesDetail"
+import ServicesNavDetail from "./pages/ServicesDetail/servicesNavDetail"
+import About from "./pages/About/About"
 
 function App() {
 
@@ -18,6 +20,7 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/About" element={<About/>}/>
         <Route path="/Services" element={<Services/>}/>
         <Route path="/Portfolio" element={<Portfolio/>}/>
         <Route path="/Blog" element={<Blog/>}/>
@@ -25,6 +28,7 @@ function App() {
         <Route path="BlogDetail/:id" element={<BlogDetail/>}/>
         <Route path="Faq" element={<Faq/>}/>
         <Route path="/ServicesDetail/:id" element={<ServicesDetail/>}/>
+        <Route path="/ServicesNavDetail/:id" element={<ServicesNavDetail/>}/>
       </Routes>
       <Footer/>
     </div>

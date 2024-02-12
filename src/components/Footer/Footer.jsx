@@ -29,8 +29,7 @@ const Footer = () => {
             <div className='col-lg-3 col-sm-6 mt-3'>
               <div className='single-box'>
                 <h5 className='mb-3'>Faydalı Linklər</h5>
-                <p className='mb-3'><NavLink>Layihələrimiz</NavLink></p>
-                <p className='mb-3'><NavLink>Qiymətlər</NavLink></p>
+                <p className='mb-3'><NavLink to='/Portfolio'>Layihələrimiz</NavLink></p>
                 <p><NavLink to='/Faq'>Faq</NavLink></p>
               </div>
             </div>
@@ -45,11 +44,11 @@ const Footer = () => {
             <div className='col-lg-3 col-sm-6 mt-3'>
               <div className='single-box'>
                 <h5 className='mb-3'>Abunə ol</h5>
-                <div className='position-relative d-flex align-items-center'>
+                <form action='' className='position-relative d-flex align-items-center'>
                   <input type='email' placeholder='Xəbərlər və Yeniliklər alın' className='w-100 border border-0 border-bottom pb-3' />
-                  <SiMaildotru className='position-absolute end-0 ' />
+                  <button className='border-0 bg-transparent position-absolute end-0'> <SiMaildotru/></button>
 
-                </div>
+                </form>
                 <p className='pt-2'>Bizim təcrübəmiz, eləcə də veb dizayna olan həvəsimiz bizi digər agentliklərdən fərqləndirir.</p>
               </div>
             </div>

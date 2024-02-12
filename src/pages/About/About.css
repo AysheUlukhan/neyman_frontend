@@ -1,0 +1,15 @@
+.about .about-head a{
+    text-decoration: none;
+    color: var(--dark);
+    font-weight: 500;
+}
+
+.about .about-head p{
+    color: var(--medium-blue);
+    font-weight: 500;
+}
+
+.about hr{
+    width: 60px;
+    color: var(--medium-blue);
+}

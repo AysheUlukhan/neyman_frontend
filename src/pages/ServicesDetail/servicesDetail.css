@@ -1,0 +1,28 @@
+.servicesDetail .servicesDetail-head a {
+    text-decoration: none;
+    color: var(--dark);
+    font-weight: 500;
+}
+
+.servicesDetail .servicesDetail-head p {
+    color: var(--medium-blue);
+    font-weight: 500;
+}
+
+.servicesDetail li {
+    color: var(--dark);
+}
+
+.servicesDetail article .services-post {
+    /* border: 1px solid var(--medium-blue); */
+    padding: 20px;
+    border-left: 6px solid var(--medium-blue);
+
+    -webkit-box-shadow: 2px 2px 6px 0px rgba(212, 212, 212, 1);
+    -moz-box-shadow: 2px 2px 6px 0px rgba(212, 212, 212, 1);
+    box-shadow: 2px 2px 6px 0px rgba(212, 212, 212, 1);
+}
+
+.servicesDetail form input, textarea{
+    outline: none;
+}

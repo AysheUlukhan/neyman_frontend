@@ -25,8 +25,8 @@ const Faq = () => {
             <div className='wrapper'>
                 <div className='accordion'>
                     {faqData.map((item, i) => (
-                        <div className='item' key={item.id}>
-                            <div className='title d-flex justify-content-between align-items-center gap-2 pb-3 cursor-pointer' onClick={() => toogle(i)}>
+                        <div className='item border p-2 mb-2' key={item.id}>
+                            <div className='title d-flex justify-content-between align-items-center gap-2 pb-2 cursor-pointer' onClick={() => toogle(i)}>
                                 <div>
                                     <p className=' fw-medium'>{item.number}</p>
                                     <h4 className='pt-2'>{item.title}</h4>
@@ -35,7 +35,7 @@ const Faq = () => {
                                 <span>{selected === i ? <FiArrowUpRight className='fs-22' /> : <FiArrowDownRight className='fs-22' />}</span>
                             </div>
                             <div className={selected === i ? 'answer show' : 'answer'}>
-                                <p className='fs-18 pb-3'>{item.answer}</p>
+                                <p className='fs-18 '>{item.answer}</p>
                             </div>
                         </div>
                     ))}
