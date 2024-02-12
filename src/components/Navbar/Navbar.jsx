@@ -73,7 +73,7 @@ const Navbar = () => {
                       <NavLink to='/Services' className='nav-link'>Services</NavLink>
                     </li>
                     <li className='h-60'>
-                      <NavLink to='/Layihələr' className='nav-link'>Haqqımızda</NavLink>
+                      <NavLink to='/Portfolio' className='nav-link'>Layihələr</NavLink>
                     </li>
                     <li className='h-60'>
                       <NavLink to='/Blog' className='nav-link'>Bloq</NavLink>
