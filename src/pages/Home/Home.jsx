@@ -106,7 +106,7 @@ const Home = () => {
             {
               servicesData.map((item) => (
                 <NavLink className='text-decoration-none' key={item.id} to={`/ServicesDetail/${item.id}`}>
-                  <a href='#/' className='text-decoration-none text-black' ><p className='fs-35 text-title'>{item.title} /</p></a>
+                  <p className='text-decoration-none text-black' ><span className='fs-35 text-title'>{item.title} /</span></p>
                 </NavLink>
               ))}
           </div>

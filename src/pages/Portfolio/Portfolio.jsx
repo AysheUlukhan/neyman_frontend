@@ -38,9 +38,6 @@ const Portfolio = () => {
             {
               collection.map((item) => <li><button onClick={() => { gallery_filter(item) }}>{item}</button></li>)
             }
-            {/* <li>DİZAYN</li>
-            <li>İNKİŞAF</li>
-            <li>MARKETİNQ</li> */}
           </ul>
         </div>
       </div>
