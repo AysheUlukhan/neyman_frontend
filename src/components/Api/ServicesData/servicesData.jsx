@@ -1,7 +1,7 @@
 export const servicesData =[
     {
         id:'1',
-        title: 'Rəqəmsal Marketinq',
+        title: 'Veb Saytlar',
         info: 'Augue pharetra sem ullamcorper nisl ante. Ac arcu donec sed nunc pharetra nunc vitae. Volutpat arcu augue ut quisque id ut. A et viverra at nunc nisl. Ac a amet ullamcorper nulla etiam suspendisse. Montes tincidunt adipiscing commodo porttitor sit quis dolor velit quam.Commodo mauris semper mauris vitae mauris ultrices. Risus velit aliquet ultrices phasellus id. Duis ut magna rutrum purus ridiculus. Sed condimentum leo.At ac aliquam morbi nullam lorem neque dignissim egestas.',
         name_1: 'Korporativ sayt',
         content_1: 'Korporativ sayt - Sizin şirkətin internetdə olan təmsilçisidir. Doğru şəkildə hazırlanmış korporativ sayt şirkətin üstünlüklərini, müsbət imicini və gücünü özündə əks etdirə bilər.',
@@ -13,7 +13,7 @@ export const servicesData =[
 
     {
         id:'2',
-        title: 'İstifadəçi təcrübəsi',
+        title: 'Mobil Tətbiqlər',
         info: 'Augue pharetra sem ullamcorper nisl ante. Ac arcu donec sed nunc pharetra nunc vitae. Volutpat arcu augue ut quisque id ut. A et viverra at nunc nisl. Ac a amet ullamcorper nulla etiam suspendisse. Montes tincidunt adipiscing commodo porttitor sit quis dolor velit quam.Commodo mauris semper mauris vitae mauris ultrices. Risus velit aliquet ultrices phasellus id. Duis ut magna rutrum purus ridiculus. Sed condimentum leo.At ac aliquam morbi nullam lorem neque dignissim egestas.',
         name_1: 'Korporativ sayt',
         content_1: 'Korporativ sayt - Sizin şirkətin internetdə olan təmsilçisidir. Doğru şəkildə hazırlanmış korporativ sayt şirkətin üstünlüklərini, müsbət imicini və gücünü özündə əks etdirə bilər.',
@@ -25,7 +25,7 @@ export const servicesData =[
 
     {
         id:'3',
-        title: 'İnkişaf',
+        title: 'Rəqəmsal Marketinq',
         info: 'Augue pharetra sem ullamcorper nisl ante. Ac arcu donec sed nunc pharetra nunc vitae. Volutpat arcu augue ut quisque id ut. A et viverra at nunc nisl. Ac a amet ullamcorper nulla etiam suspendisse. Montes tincidunt adipiscing commodo porttitor sit quis dolor velit quam.Commodo mauris semper mauris vitae mauris ultrices. Risus velit aliquet ultrices phasellus id. Duis ut magna rutrum purus ridiculus. Sed condimentum leo.At ac aliquam morbi nullam lorem neque dignissim egestas.',
         name_1: 'Korporativ sayt',
         content_1: 'Korporativ sayt - Sizin şirkətin internetdə olan təmsilçisidir. Doğru şəkildə hazırlanmış korporativ sayt şirkətin üstünlüklərini, müsbət imicini və gücünü özündə əks etdirə bilər.',
@@ -37,7 +37,7 @@ export const servicesData =[
 
     {
         id:'4',
-        title: 'Brendləşmə',
+        title: 'Qrafik Dizayn',
         info: 'Augue pharetra sem ullamcorper nisl ante. Ac arcu donec sed nunc pharetra nunc vitae. Volutpat arcu augue ut quisque id ut. A et viverra at nunc nisl. Ac a amet ullamcorper nulla etiam suspendisse. Montes tincidunt adipiscing commodo porttitor sit quis dolor velit quam.Commodo mauris semper mauris vitae mauris ultrices. Risus velit aliquet ultrices phasellus id. Duis ut magna rutrum purus ridiculus. Sed condimentum leo.At ac aliquam morbi nullam lorem neque dignissim egestas.',
         name_1: 'Korporativ sayt',
         content_1: 'Korporativ sayt - Sizin şirkətin internetdə olan təmsilçisidir. Doğru şəkildə hazırlanmış korporativ sayt şirkətin üstünlüklərini, müsbət imicini və gücünü özündə əks etdirə bilər.',
@@ -49,7 +49,7 @@ export const servicesData =[
 
     {
         id:'5',
-        title: 'Mobil Proqram',
+        title: 'Veb Dizayn',
         info: 'Augue pharetra sem ullamcorper nisl ante. Ac arcu donec sed nunc pharetra nunc vitae. Volutpat arcu augue ut quisque id ut. A et viverra at nunc nisl. Ac a amet ullamcorper nulla etiam suspendisse. Montes tincidunt adipiscing commodo porttitor sit quis dolor velit quam.Commodo mauris semper mauris vitae mauris ultrices. Risus velit aliquet ultrices phasellus id. Duis ut magna rutrum purus ridiculus. Sed condimentum leo.At ac aliquam morbi nullam lorem neque dignissim egestas.',
         name_1: 'Korporativ sayt',
         content_1: 'Korporativ sayt - Sizin şirkətin internetdə olan təmsilçisidir. Doğru şəkildə hazırlanmış korporativ sayt şirkətin üstünlüklərini, müsbət imicini və gücünü özündə əks etdirə bilər.',
@@ -61,7 +61,7 @@ export const servicesData =[
 
     {
         id:'6',
-        title: 'İllüstrasiyalar',
+        title: 'Süni İntellekt',
         info: 'Augue pharetra sem ullamcorper nisl ante. Ac arcu donec sed nunc pharetra nunc vitae. Volutpat arcu augue ut quisque id ut. A et viverra at nunc nisl. Ac a amet ullamcorper nulla etiam suspendisse. Montes tincidunt adipiscing commodo porttitor sit quis dolor velit quam.Commodo mauris semper mauris vitae mauris ultrices. Risus velit aliquet ultrices phasellus id. Duis ut magna rutrum purus ridiculus. Sed condimentum leo.At ac aliquam morbi nullam lorem neque dignissim egestas.',
         name_1: 'Korporativ sayt',
         content_1: 'Korporativ sayt - Sizin şirkətin internetdə olan təmsilçisidir. Doğru şəkildə hazırlanmış korporativ sayt şirkətin üstünlüklərini, müsbət imicini və gücünü özündə əks etdirə bilər.',
@@ -70,9 +70,10 @@ export const servicesData =[
         name_3: 'Adaptiv Dizayn',
         content_3: 'Dünyada internet istifadəçilərinin 95% saytlara mobil telefon vasitəsilə daxil olduğunu nəzərə alaraq, təmsil etdiyiniz şirkətin saytının adaptiv olması mütləqdir.',
     },
+
     {
         id:'7',
-        title: 'Proqram Dizaynı',
+        title: 'Startap Layihələr',
         info: 'Augue pharetra sem ullamcorper nisl ante. Ac arcu donec sed nunc pharetra nunc vitae. Volutpat arcu augue ut quisque id ut. A et viverra at nunc nisl. Ac a amet ullamcorper nulla etiam suspendisse. Montes tincidunt adipiscing commodo porttitor sit quis dolor velit quam.Commodo mauris semper mauris vitae mauris ultrices. Risus velit aliquet ultrices phasellus id. Duis ut magna rutrum purus ridiculus. Sed condimentum leo.At ac aliquam morbi nullam lorem neque dignissim egestas.',
         name_1: 'Korporativ sayt',
         content_1: 'Korporativ sayt - Sizin şirkətin internetdə olan təmsilçisidir. Doğru şəkildə hazırlanmış korporativ sayt şirkətin üstünlüklərini, müsbət imicini və gücünü özündə əks etdirə bilər.',
@@ -83,7 +84,18 @@ export const servicesData =[
     },
     {
         id:'8',
-        title: 'Şəkil',
+        title: 'Texniki Dəstək',
+        info: 'Augue pharetra sem ullamcorper nisl ante. Ac arcu donec sed nunc pharetra nunc vitae. Volutpat arcu augue ut quisque id ut. A et viverra at nunc nisl. Ac a amet ullamcorper nulla etiam suspendisse. Montes tincidunt adipiscing commodo porttitor sit quis dolor velit quam.Commodo mauris semper mauris vitae mauris ultrices. Risus velit aliquet ultrices phasellus id. Duis ut magna rutrum purus ridiculus. Sed condimentum leo.At ac aliquam morbi nullam lorem neque dignissim egestas.',
+        name_1: 'Korporativ sayt',
+        content_1: 'Korporativ sayt - Sizin şirkətin internetdə olan təmsilçisidir. Doğru şəkildə hazırlanmış korporativ sayt şirkətin üstünlüklərini, müsbət imicini və gücünü özündə əks etdirə bilər.',
+        name_2: 'Landing Page Dizaynı',
+        content_2: 'Düzgün şəkildə qurulmuş bir səhifəlik landing page hər hansı bir məhsul və ya xidmətinizin satışına necə müsbət təsir etməsini təsəvvür edin.',
+        name_3: 'Adaptiv Dizayn',
+        content_3: 'Dünyada internet istifadəçilərinin 95% saytlara mobil telefon vasitəsilə daxil olduğunu nəzərə alaraq, təmsil etdiyiniz şirkətin saytının adaptiv olması mütləqdir.',
+    },
+    {
+        id:'9',
+        title: 'Media Xidmətləri',
         info: 'Augue pharetra sem ullamcorper nisl ante. Ac arcu donec sed nunc pharetra nunc vitae. Volutpat arcu augue ut quisque id ut. A et viverra at nunc nisl. Ac a amet ullamcorper nulla etiam suspendisse. Montes tincidunt adipiscing commodo porttitor sit quis dolor velit quam.Commodo mauris semper mauris vitae mauris ultrices. Risus velit aliquet ultrices phasellus id. Duis ut magna rutrum purus ridiculus. Sed condimentum leo.At ac aliquam morbi nullam lorem neque dignissim egestas.',
         name_1: 'Korporativ sayt',
         content_1: 'Korporativ sayt - Sizin şirkətin internetdə olan təmsilçisidir. Doğru şəkildə hazırlanmış korporativ sayt şirkətin üstünlüklərini, müsbət imicini və gücünü özündə əks etdirə bilər.',

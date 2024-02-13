@@ -18,16 +18,13 @@ import { GrLanguage } from "react-icons/gr";
 const Navbar = () => {
   return (
     <nav className='shadow-lg'>
-      <div className='container-fluid'>
+      <div className='container'>
         <div className='d-flex justify-content-between align-items-center'>
           <div>
             <NavLink to='/'><img src={logo} className='logo' alt='logo' /></NavLink>
           </div>
-          <div className='d-none d-xl-block d-xxl-block'>
+          <div className='d-none d-xl-block d-xxl-block mt-3'>
             <ul className='d-flex align-items-center gap-64'>
-              <li>
-                <NavLink to='/' className='nav-link fw-semibold '>Ana Səhifə</NavLink>
-              </li>
               <li>
                 <NavLink to='/About' className='nav-link fw-semibold '>Haqqımızda</NavLink>
               </li>
@@ -36,7 +33,7 @@ const Navbar = () => {
                   to="services"
                   spy={true}
                   smooth={true}
-                  duration={700} className='fw-semibold nav-link'>Services</Link>
+                  duration={700} className='fw-semibold nav-link'>Servislər</Link>
               </li>
               <li>
                 <NavLink to='/Portfolio' className='nav-link fw-semibold '>Layihələr</NavLink>
@@ -47,12 +44,10 @@ const Navbar = () => {
               <li>
                 <NavLink to='/Contact' className='nav-link fw-semibold '>Əlaqə</NavLink>
               </li>
+              <GrLanguage className='me-2 fs-20 cursor-pointer' />
             </ul>
           </div>
-
-
           <div>
-            <GrLanguage className='me-2 fs-20 cursor-pointer'/>
             <HiMenuAlt1 className='fs-30 cursor-pointer' data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" />
 
             <div className="offcanvas offcanvas-end" tabIndex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
@@ -122,8 +117,6 @@ const Navbar = () => {
               </div>
             </div>
           </div>
-
-
         </div>
       </div>
     </nav>

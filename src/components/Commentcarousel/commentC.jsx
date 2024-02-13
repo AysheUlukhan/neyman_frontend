@@ -6,10 +6,10 @@ import { commentData } from '../Api/CommentData/commentData'
 import SwiperButton from './SwiperNavButton/SwiperButton';
 const commentC = () => {
     return (
-        <div className='container py-5 testimonials'>
+        <div className='container testimonials'>
             <div className='testimonials-head'>
                 <p className='fs-18'>Rəylər</p>
-                <h3 className='fs-48 pb-5 testimonials-title'>Müştərilərimizin Dedikləri</h3>
+                <h3 className='fs-40 pb-5 testimonials-title'>Müştərilərimizin Dedikləri</h3>
             </div>
             <Swiper
                 grabCursor={true}

@@ -12,9 +12,10 @@ import blogimg_2 from '../../assets/images/home-page-img/blog-img-2.png';
 import blogimg_3 from '../../assets/images/home-page-img/blog-img-3.png';
 import CommentSlider from '../../components/Commentcarousel/commentC';
 import { servicesData } from '../../components/Api/ServicesData/servicesData';
+import { NavLink } from 'react-router-dom';
 
 import { TypeAnimation } from 'react-type-animation';
-import { NavLink } from 'react-router-dom';
+// import { NavLink } from 'react-router-dom';
 // import { motion } from 'framer-motion';
 // import { fadeIn } from '../../variants';
 
@@ -29,32 +30,15 @@ const Home = () => {
   }
   return (
     <div className='home'>
-      <section className="container px-4 py-5">
+      <section className="container px-4">
         <div className="row align-items-center justify-content-xl-between gap-16 py-5">
-          <div
-            // variants={fadeIn('right', 0.5)}
-            // initial='hidden'
-            // whileInView={'show'}
-            // viewport={{ once: false, amount: 0.7 }}
-            className="col-12 col-sm-12 col-xl-4 col-md-4 col-lg-4">
-            <img src={heroimg} className="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" loading="lazy" />
-          </div>
-          <div
-            // variants={fadeIn('left', 0.5)}
-            // initial='hidden'
-            // whileInView={'show'}
-            // viewport={{ once: false, amount: 0.7 }}
-            className="col-xl-6 col-md-7 col-lg-7">
-            <p className=" fw-medium fs-18 text">Məqsədimiz ehtiyaclarınıza uyğun həll yolu ilə uzaqlaşmanızı mümkün qədər asanlaşdırmaqdır.</p>
-          </div>
-          <div
-            // variants={fadeIn('up', 0.5)}
-            // initial='hidden'
-            // whileInView={'show'}
-            // viewport={{ once: false, amount: 0.7 }}
-            className='text-center'>
-            <h4 className='fs-96 text-black md-fs-48 hero-text'>Biz
-              <span className='ms-4'>
+          <div>
+         
+                
+                <p className='fs-22'>İdeyanı Yaz, <NavLink to='/Contact' className='text-decoration-none border_style'>Qiymət Təklifi Al</NavLink></p>
+         
+            <h4 className='text-black hero-text py-5'>
+              <span>
                 <TypeAnimation sequence={
                   [
                     'Sadə',
@@ -68,94 +52,58 @@ const Home = () => {
                   repeat={Infinity}
 
                 />
-                <br className='d-block d-xl-none d-xxl-none'/>
               </span>
-              <br className='d-none d-xl-block d-xxl-block' /> Həllərin Çatdırılması <br className='d-none d-xl-block d-xxl-block' /> üzərində işləyirik</h4>
-          </div>
-          <div
-            // variants={fadeIn('right', 0.5)}
-            // initial='hidden'
-            // whileInView={'show'}
-            // viewport={{ once: false, amount: 0.7 }}
-            className="col-xl-6 col-md-7 col-lg-7">
-            <p className=" fw-medium fs-18 text ">Müştərilərimizin hər biri ilə biz yaradıcı problemlərin həlli üçün dərin ehtiras yaradırıq - bunu çatdırırıq.</p>
-          </div>
-          <div
-            // variants={fadeIn('left', 0.5)}
-            // initial='hidden'
-            // whileInView={'show'}
-            // viewport={{ once: false, amount: 0.7 }}
-            className="col-12 col-sm-12 col-xl-4 col-md-4 col-lg-4">
-            <img src={heroimg} className="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" loading="lazy" />
+                  <span className='text'>Proqram <br /> Təminatının </span>
+                  Həlləri Üzərində İşləyirik
+              </h4>
           </div>
         </div>
       </section>
 
-      <section className='container'>
-        <img src={sectionshap} className="d-block mx-lg-auto img-fluid" />
-      </section>
       <section className='benefit'>
         <div className="container px-4 py-5">
-          <div className="row g-5 py-5">
+          <div className="row g-5 ">
             <div
-              // variants={fadeIn('right', 0.5)}
-              // initial='hidden'
-              // whileInView={'show'}
-              // viewport={{ once: false, amount: 0.7 }}
               className="col-lg-6">
               <div className='benefit-head'>
                 <p className='fs-18 mb-3'>FAYDALARIMIZ</p>
-                <h4 className="lh-1 fs-48 mb-3">Biznesiniz üçün gəlir artımının kilidini açın</h4>
+                <h4 className="lh-1 fs-40 mb-3">Biznesiniz üçün gəlir artımının kilidini açın</h4>
               </div>
               <div className='wrapper'>
                 <div className='accordion'>
                   {accordionData.map((item, i) => (
                     <div className='item' key={item.id}>
-                      <div className='title d-flex align-items-center gap-2' onClick={() => toogle(i)}>
-                        <span>{selected === i ? <FaMinus className='fs-22' /> : <FaPlus className='fs-22' />}</span>
-                        <h4>{item.title}</h4>
+                      <div className='title d-flex gap-2 cursor-pointer' onClick={() => toogle(i)}>
+                        <span>{selected === i ? <FaMinus className='fs-22 mb-2' /> : <FaPlus className='fs-22 mb-2' />}</span>
+                        <h4 className='fs-18'>{item.title}</h4>
                       </div>
                       <div className={selected === i ? 'answer show' : 'answer'}>
-                        <p>{item.answer}</p>
+                        <p className='fs-14 ms-4 mb-3'>{item.answer}</p>
                       </div>
                     </div>
                   ))}
                 </div>
               </div>
-
             </div>
             <div
-              // variants={fadeIn('left', 0.5)}
-              // initial='hidden'
-              // whileInView={'show'}
-              // viewport={{ once: false, amount: 0.7 }}
               className="col-sm-12 col-lg-6">
               <img src={ourbenefits} className="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" loading="lazy" />
             </div>
-
           </div>
         </div>
       </section>
-      <section className=''>
-        <img src={sectionshap} className="d-block mx-lg-auto img-fluid" />
-      </section>
 
       <section
-        // variants={fadeIn('down', 0.5)}
-        // initial='hidden'
-        // whileInView={'show'}
-        // viewport={{ once: false, amount: 0.7 }}
         id='services' className='services py-5'>
         <div className='text-center '>
           <h4 className='fs-18'>SİZİN ÜÇÜN TƏKLİF EDİRİK</h4>
         </div>
-        <div className='container'>
-          
-          <div className='d-flex justify-content-center align-items-center gap-3 flex-wrap fs-48 text-black'>
+        <div className='container pt-4'>
+          <div className='d-flex justify-content-center align-items-center gap-3 flex-wrap text-black'>
             {
               servicesData.map((item)=>(
                 <NavLink className='text-decoration-none'  key={item.id} to={`/ServicesDetail/${item.id}`}>
-                  <a href='#/' className='text-decoration-none text-black' ><h4 className='fs-48'>{item.title} /</h4></a>
+                  <a href='#/' className='text-decoration-none text-black' ><h4 className='fs-35'>{item.title} /</h4></a>
                 </NavLink> 
               ))}
             {/* <a href='#/' className='text-decoration-none text-black' ><h4 className='fs-48'>Rəqəmsal Marketinq</h4></a> /
@@ -169,14 +117,8 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <section className='container'>
-        <img src={sectionshap} className="d-block mx-lg-auto img-fluid" />
-      </section>
+      
       <section
-      // variants={fadeIn('up', 0.5)}
-      // initial='hidden'
-      // whileInView={'show'}
-      // viewport={{ once: false, amount: 0.7 }}
       >
         <CommentSlider />
       </section>
@@ -184,7 +126,7 @@ const Home = () => {
         <img src={sectionshap} className="d-block mx-lg-auto img-fluid" />
       </section>
       <section className='home-blog'>
-        <div className='container py-5'>
+        <div className='container'>
           <div className='home-blog-head d-flex align-items-center justify-content-between'>
             <div className='text-black'>
               <p className='fs-18'>BLOQ</p>

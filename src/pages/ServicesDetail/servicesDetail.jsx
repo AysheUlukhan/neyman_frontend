@@ -50,7 +50,7 @@ const servicesDetail = () => {
               }
             </div>
 
-            <div className='border p-4 mt-5'>
+            <div className='border p-4 mt-5'> 
               <p className='text-center fs-20 fw-medium'>Sifariş et</p>
               <form action="" className='mt-3'>
                 <input className='w-100 border p-2' type="text" placeholder='Ad və Soyad *' />
