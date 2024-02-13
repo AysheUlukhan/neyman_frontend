@@ -32,6 +32,9 @@ footer .single-box a{
 
 footer .single-box input{
     outline: none;
+    background-color: transparent;
+    border-radius: 0;
+    font-size: 15px;
 }
 
 footer .footer-end{

@@ -9,7 +9,7 @@ const commentC = () => {
         <div className='container testimonials'>
             <div className='testimonials-head'>
                 <p className='fs-18'>Rəylər</p>
-                <h3 className='fs-40 pb-5 testimonials-title'>Müştərilərimizin Dedikləri</h3>
+                <h4 className='fs-36 pb-5 testimonials-title'>Müştərilərimizin Dedikləri</h4>
             </div>
             <Swiper
                 grabCursor={true}
@@ -32,15 +32,15 @@ const commentC = () => {
                     },
                     768: {
                         spaceBetween: 15,
-                        slidesPerView: 2,
+                        slidesPerView: 1,
                     },
 
                     912: {
                         spaceBetween: 15,
-                        slidesPerView: 2,
+                        slidesPerView: 1,
                     },
                     1280: {
-                        spaceBetween: 30,
+                        spaceBetween: 70,
                         slidesPerView: 2,
                     },
                 }}
@@ -49,17 +49,15 @@ const commentC = () => {
 
                 {
                     commentData.map((item) => (
-                        <div>
                             <SwiperSlide key={item.id}>
-                                <div className=''>
-                                    <div className='col-xl-12 '>
+                                    <div className='col-xl-12'>
                                         <div className='d-flex align-items-center gap-3'>
                                             <img src={item.icon} />
                                             <h5>{item.title}</h5>
                                         </div>
                                         <div className='pt-20'>
                                             <p className=''>{item.comment}</p>
-                                            <img src={item.imagesvg} alt='img' className='pt-20 d-block mx-lg-auto img-fluid' />
+                                            <img src={item.imagesvg} alt='img' className='pt-20 d-block mx-lg-auto img-fluid w-100' />
                                         </div>
                                         <div className='d-flex align-items-center gap-3 pt-20'>
                                             <div>
@@ -71,9 +69,7 @@ const commentC = () => {
                                             </div>
                                         </div>
                                     </div>
-                                </div>
                             </SwiperSlide>
-                        </div>
                     ))
                 }
             </Swiper>

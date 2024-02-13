@@ -32,15 +32,15 @@
     color: var(--medium-blue);
 }
 
-.home .services h4{
+.home .services p{
     transition: all .5s;
 }
 
-.home .services h4:hover{
+.home .services p:hover{
     color: var(--medium-blue);
 }
 
-.home .home-blog .home-blog-head .btn-home-blog{
+.home .home-blog .home-blog-head .btn-home-blog a{
     text-decoration: none;
     border: 1px solid black;
     padding: 18px 58px; 
@@ -56,12 +56,20 @@
 
 .home .home-blog .blog-card .card-title{
     transition:  all 0.5s;
+    padding-top: 5px;
 }
 
 .home .home-blog .blog-card .card-title:hover{
     color: var(--medium-blue);
     cursor: pointer;
 }
+
+.home .home-blog .blog-card .card-text{
+    color: var(--spanish-gray);
+    font-size: 15px;
+}
+
+
 
 .home-blog .blog-card:hover img{
     transform: rotateY(180deg);
@@ -71,6 +79,7 @@
     transition: all 0.5s;
     cursor: pointer;
     color: var(--black);
+    font-size: 15px;
 }
 
 .home-blog .blog-card .blog-card-end a:hover{
@@ -83,7 +92,7 @@
 
 .home .home-slide-section a{
     text-decoration: none;
-    color: var(--dark);
+    color: var(--black);
 }
 
 .home .slide{
@@ -141,6 +150,7 @@
 @media (max-width:768px) {
     .home .hero-text{
         font-size: 48px !important;
+        
     }
     
 }
@@ -149,6 +159,8 @@
     .home .hero-text{
         font-size: 75px;
     }
+
+    
 }
 
 
@@ -166,34 +178,42 @@
         text-align: center;
         order: 2;
     }
-    .home .benefit .benefit-head{
+    /* .home .benefit .benefit-head{
         text-align: center;
-    }
+    } */
     .home .benefit .benefit-head h4{
         font-size: 26px;
     }
     .home .benefit .img-fluid{
         text-align: center;
     }
-    .home .services h4{
-        font-size: 24px;
+    .home .services p{
+        font-size: 18px;
     }
     .home .testimonials .testimonials-title{
         font-size: 24px;
     }
-    .home .testimonials .testimonials-head{
+    /* .home .testimonials .testimonials-head{
         text-align: center;
-    }
-    .home .home-blog-head{
+    } */
+    /* .home .home-blog-head{
         text-align: center;
-    }
+    } */
     .home h3{
         font-size: 24px;
     }
     .home .home-blog-head{
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        flex-direction: column !important;
+        justify-content: flex-start !important;
+        align-items: flex-start !important;
+    }
+
+    .home .home-blog-head h4{
+        font-size: 24px;
+    }
+
+    .home .home-blog-head .btn-home-blog{
+        padding: 5px 0;
     }
 
     .home .home-blog .row{
@@ -202,17 +222,17 @@
     
 }
 
-@media (max-width:431px) {
+/* @media (max-width:431px) {
     .home .hero-text{
         font-size: 40px;
     }
-}
+} */
 
-@media (max-width:414px) {
+/* @media (max-width:414px) {
     .home .hero-text{
         font-size: 26px !important;
     }
-}
+} */
 
 @media (max-width:280px) {
     .home .benefit .benefit-head h4{
@@ -222,3 +242,13 @@
         font-size: 20px;
     }
 }
+
+/* .home .hero-logo img{
+    animation: logo 10s infinite linear;
+}
+
+@keyframes logo{
+    100%{
+        transform: rotate(360deg);
+    }
+} */

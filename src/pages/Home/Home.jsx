@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
 import './Home.css';
-import heroimg from '../../assets/images/home-hero/hader-shap-1.png';
-import sectionshap from '../../assets/images/svg/section-shap.svg';
 import ourbenefits from '../../assets/images/home-page-img/our-benefits-img-shap.png';
 import { accordionData } from '../../components/Api/AccordionData/accordionData';
 import { FaPlus } from "react-icons/fa6";
@@ -13,6 +11,7 @@ import blogimg_3 from '../../assets/images/home-page-img/blog-img-3.png';
 import CommentSlider from '../../components/Commentcarousel/commentC';
 import { servicesData } from '../../components/Api/ServicesData/servicesData';
 import { NavLink } from 'react-router-dom';
+// import logo_hero from '../../assets/images/logo/hero-logo.png'
 
 import { TypeAnimation } from 'react-type-animation';
 // import { NavLink } from 'react-router-dom';
@@ -30,14 +29,14 @@ const Home = () => {
   }
   return (
     <div className='home'>
-      <section className="container px-4">
-        <div className="row align-items-center justify-content-xl-between gap-16 py-5">
+      <section className="container px-4 py-5">
+        <div className="row align-items-center justify-content-xl-between gap-16">
           <div>
-         
-                
-                <p className='fs-22'>İdeyanı Yaz, <NavLink to='/Contact' className='text-decoration-none border_style'>Qiymət Təklifi Al</NavLink></p>
-         
-            <h4 className='text-black hero-text py-5'>
+
+
+            <p className='fs-22'>İdeyanı Yaz, <NavLink to='/Contact' className='text-decoration-none border_style'>Qiymət Təklifi Al</NavLink></p>
+
+            <h4 className='text-black hero-text pt-5'>
               <span>
                 <TypeAnimation sequence={
                   [
@@ -53,21 +52,21 @@ const Home = () => {
 
                 />
               </span>
-                  <span className='text'>Proqram <br /> Təminatının </span>
-                  Həlləri Üzərində İşləyirik
-              </h4>
+              <span className='text'>Proqram <br /> Təminatının </span>
+              Həlləri Üzərində İşləyirik
+            </h4>
           </div>
         </div>
       </section>
 
       <section className='benefit'>
         <div className="container px-4 py-5">
-          <div className="row g-5 ">
+          <div className="row g-5">
             <div
               className="col-lg-6">
               <div className='benefit-head'>
-                <p className='fs-18 mb-3'>FAYDALARIMIZ</p>
-                <h4 className="lh-1 fs-40 mb-3">Biznesiniz üçün gəlir artımının kilidini açın</h4>
+                <p className=' mb-3'>FAYDALARIMIZ</p>
+                <h4 className="lh-1 fs-40 fw-bold mb-4">Biznesiniz üçün gəlir artımının kilidini açın</h4>
               </div>
               <div className='wrapper'>
                 <div className='accordion'>
@@ -85,9 +84,13 @@ const Home = () => {
                 </div>
               </div>
             </div>
-            <div
-              className="col-sm-12 col-lg-6">
-              <img src={ourbenefits} className="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" loading="lazy" />
+            <div className="col-sm-12 col-lg-6">
+              <div className='position-relative'>
+                <img src={ourbenefits} className="d-block mx-lg-auto img-fluid  position-relative" alt="Bootstrap Themes" loading="lazy" />
+              </div>
+              {/* <div className='hero-logo'>
+                <img src={logo_hero} alt="" className='position-absolute top-100' />
+              </div> */}
             </div>
           </div>
         </div>
@@ -96,44 +99,33 @@ const Home = () => {
       <section
         id='services' className='services py-5'>
         <div className='text-center '>
-          <h4 className='fs-18'>SİZİN ÜÇÜN TƏKLİF EDİRİK</h4>
+          <h4 className='fs-22'>SİZİN ÜÇÜN TƏKLİF EDİRİK</h4>
         </div>
         <div className='container pt-4'>
           <div className='d-flex justify-content-center align-items-center gap-3 flex-wrap text-black'>
             {
-              servicesData.map((item)=>(
-                <NavLink className='text-decoration-none'  key={item.id} to={`/ServicesDetail/${item.id}`}>
-                  <a href='#/' className='text-decoration-none text-black' ><h4 className='fs-35'>{item.title} /</h4></a>
-                </NavLink> 
+              servicesData.map((item) => (
+                <NavLink className='text-decoration-none' key={item.id} to={`/ServicesDetail/${item.id}`}>
+                  <a href='#/' className='text-decoration-none text-black' ><p className='fs-35 text-title'>{item.title} /</p></a>
+                </NavLink>
               ))}
-            {/* <a href='#/' className='text-decoration-none text-black' ><h4 className='fs-48'>Rəqəmsal Marketinq</h4></a> /
-            <a href='#/' className='text-decoration-none text-black'><h4 className='fs-48'>İstifadəçi təcrübəsi</h4></a> /
-            <a href='#/' className='text-decoration-none text-black'><h4 className='fs-48'>İnkişaf</h4></a> /
-            <a href='#/' className='text-decoration-none text-black'><h4 className='fs-48'>Brendləşmə</h4></a> /
-            <a href='#/' className='text-decoration-none text-black'><h4 className='fs-48'>Mobil Proqram</h4></a> /
-            <a href='#/' className='text-decoration-none text-black'><h4 className='fs-48'>İllüstrasiyalar</h4></a> /
-            <a href='#/' className='text-decoration-none text-black'><h4 className='fs-48'>Proqram Dizaynı</h4></a> /
-            <a href='#/' className='text-decoration-none text-black'><h4 className='fs-48'>Şəkil</h4></a> */}
           </div>
         </div>
       </section>
-      
+
       <section
       >
         <CommentSlider />
       </section>
-      <section className='container'>
-        <img src={sectionshap} className="d-block mx-lg-auto img-fluid" />
-      </section>
-      <section className='home-blog'>
+      <section className='home-blog py-5'>
         <div className='container'>
           <div className='home-blog-head d-flex align-items-center justify-content-between'>
             <div className='text-black'>
               <p className='fs-18'>BLOQ</p>
-              <h3 className='fs-48'>Ən Son Blogumuz Nədir</h3>
+              <h4 className='fs-35'>Ən Son Blogumuz Nədir</h4>
             </div>
-            <div>
-              <a href='#/' className='btn-home-blog'>DAHA ÇOX BAXIN<FiArrowUpRight className='fs-22' /></a>
+            <div className='btn-home-blog'>
+              <a href='#/'>DAHA ÇOX BAXIN<FiArrowUpRight className='fs-22' /></a>
             </div>
           </div>
           <div className='row py-5'>
@@ -141,7 +133,7 @@ const Home = () => {
               <div className='blog-card'>
                 <div className='card-body border p-30'>
                   <p className='card-text'>20 dekabr 2022-ci il | İNKİŞAF</p>
-                  <h3 className='card-title '>Siz hələ də rəqəmsal alətlərdən istifadə etmirsiniz?</h3>
+                  <h5 className='card-title'>Siz hələ də rəqəmsal alətlərdən istifadə etmirsiniz?</h5>
                 </div>
                 <img src={blogimg_1} alt='blog-img' className="d-block w-100 img-fluid" />
                 <div className='p-30 border blog-card-end'>
@@ -154,7 +146,7 @@ const Home = () => {
               <div className='blog-card'>
                 <div className='card-body border p-30'>
                   <p className='card-text'>20 dekabr 2022-ci il | BİZNES</p>
-                  <h3 className='card-title'>Onlayn biznes üçün rəqəmsal marketinq</h3>
+                  <h5 className='card-title'>Onlayn biznes üçün rəqəmsal marketinq</h5>
                 </div>
                 <img src={blogimg_2} alt='blog-img' className="d-block w-100 img-fluid" />
                 <div className='p-30 border blog-card-end'>
@@ -167,7 +159,7 @@ const Home = () => {
               <div className='blog-card'>
                 <div className='card-body border p-30'>
                   <p className='card-text'>20 dekabr 2022-ci il | DİZAYN</p>
-                  <h3 className='card-title'>Çətinlikləri Fürsətlərə çevirin</h3>
+                  <h5 className='card-title'>Çətinlikləri Fürsətlərə çevirin</h5>
                 </div>
                 <img src={blogimg_3} alt='blog-img' className="d-block w-100 img-fluid" />
                 <div className='p-30 border blog-card-end'>
@@ -181,7 +173,7 @@ const Home = () => {
       </section>
       <section className='home-slide-section'>
         <div className='slide'>
-          <ul className='d-flex gap-40 fs-48 home-slide lh-sm fw-bold'>
+          <ul className='d-flex gap-40 fs-35 home-slide lh-sm fw-bold'>
             <li><a href='mailto:info.neyman.e.t@gmail.com'>info.neyman.e.t@gmail.com</a></li>
             <li><a href='tel:+994 50 631 07 22'>+994 50 631 07 22</a></li>
             <li><a href='mailto:info.neyman.e.t@gmail.com'>info.neyman.e.t@gmail.com</a></li>
@@ -191,7 +183,7 @@ const Home = () => {
           </ul>
         </div>
         <div className='slider pt-20'>
-          <ul className='d-flex gap-40 fs-48 home-slider lh-sm fw-bold'>
+          <ul className='d-flex gap-40 fs-35 home-slider lh-sm fw-bold'>
             <li><a href='#/'>Rəqəmsal Marketinq</a></li>
             <li><a href='#/'>İstifadəçi Təcrübəsi Dizaynı</a></li>
             <li><a href='#/'>Yaradıcı Dizayn</a></li>
