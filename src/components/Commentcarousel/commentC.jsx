@@ -8,8 +8,8 @@ const commentC = () => {
     return (
         <div className='container testimonials'>
             <div className='testimonials-head'>
-                <p className='fs-18'>Rəylər</p>
-                <h4 className='fs-36 pb-5 testimonials-title'>Müştərilərimizin Dedikləri</h4>
+                {/* <p className='fs-18'>Rəylər</p> */}
+                <h4 className='pb-5 testimonials-title text-center fs-30 fw-bolder'>MÜŞTƏRİLƏRİMİZİN RƏYLƏRİ</h4>
             </div>
             <Swiper
                 grabCursor={true}

@@ -44,7 +44,7 @@ const Portfolio = () => {
       <div className='row row-gap-4'>
         {
           data.map((item) => (
-            <div className='col-xl-6 col-md-6 col-sm-12'>
+            <div className='col-xl-6 col-md-6 col-sm-12' key={item.id}>
               <div className='wrapper'>
                 <div className='image'>
                   <img src={item.image} className="d-block mx-lg-auto img-fluid portfolioImg" />

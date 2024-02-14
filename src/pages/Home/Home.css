@@ -1,10 +1,20 @@
 .home .hero-text{
-    font-size: 80px;
+    font-size: 70px;
     font-weight: 600;
+}
+
+.home .hero-section{
+    padding: 100px 0;
 }
 
 .home .hero-text .text{
     color: var(--medium-blue);
+}
+
+.home .benefit .row{
+    background-color: #1d41ec;
+    color: var(--white);
+    padding: 80px 40px;
 }
 
 .home .border_style{
@@ -29,14 +39,14 @@
 }
 
 .home .wrapper .accordion span{
-    color: var(--medium-blue);
+    color: var(--white);
 }
 
-.home .services p{
+.home .services span{
     transition: all .5s;
 }
 
-.home .services p:hover{
+.home .services span:hover{
     color: var(--medium-blue);
 }
 
@@ -160,8 +170,29 @@
         font-size: 75px;
     }
 
+    .home .benefit .hero-img{
+        padding-top: 40px;
+    }
+
     
 }
+
+@media (max-width:992px) {
+    .home .benefit .hero-img{
+        padding-top: 40px;
+    }
+}
+
+@media (max-width:426px) {
+    .home .benefit .benefit-head p{
+        font-size: 30px;
+    }
+
+    .home .benefit .wrapper .accordion h4{
+        font-size: 20px;
+    }
+}
+
 
 
 @media (max-width:912px) {
@@ -187,6 +218,13 @@
     .home .benefit .img-fluid{
         text-align: center;
     }
+
+    .home .benefit .row {
+        padding: 150px 20px;
+    }
+
+    
+
     .home .services span{
         font-size: 18px;
     }
@@ -244,6 +282,7 @@
 }
 
 /* .home .hero-logo img{
+
     animation: logo 10s infinite linear;
 }
 
