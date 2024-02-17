@@ -8,7 +8,6 @@ import blogimg_1 from '../../assets/images/home-page-img/blog-img-1.png';
 import blogimg_2 from '../../assets/images/home-page-img/blog-img-2.png';
 import blogimg_3 from '../../assets/images/home-page-img/blog-img-3.png';
 import heroimg_3 from '../../assets/images/home-page-img/hero-image-3.jpg';
-import hero_img from '../../assets/images/logo/hero-logo.png'
 import CommentSlider from '../../components/Commentcarousel/commentC';
 import { servicesData } from '../../components/Api/ServicesData/servicesData';
 import { NavLink } from 'react-router-dom';
@@ -17,6 +16,14 @@ import { TypeAnimation } from 'react-type-animation';
 // import { NavLink } from 'react-router-dom';
 // import { motion } from 'framer-motion';
 // import { fadeIn } from '../../variants';
+
+
+
+import { CgWebsite } from "react-icons/cg";
+import { TbDeviceMobileCode } from "react-icons/tb";
+import { FaArrowRight } from "react-icons/fa6";
+
+
 
 const Home = () => {
   const [selected, setSelected] = useState(null);
@@ -65,7 +72,7 @@ const Home = () => {
           <div className="row rounded-5">
             <div className="col-lg-6 ">
               <div className='benefit-head'>
-                <p className=' mb-3 fs-40'>BİZİM FƏRQİMİZ</p>
+                <p className=' mb-3 fs-36'>BİZİM FƏRQİMİZ</p>
                 {/* <h4 className="lh-1 fs-40 fw-bold mb-4">Biznesiniz üçün gəlir artımının kilidini açın</h4> */}
               </div>
               <div className='wrapper'>
@@ -88,18 +95,21 @@ const Home = () => {
               <div>
                 <img src={heroimg_3} className="d-block mx-lg-auto img-fluid rounded-5 " alt="Bootstrap Themes" loading="lazy" />
               </div>
-            
+
             </div>
           </div>
         </div>
       </section>
 
-      {/* <section
+
+
+
+      <section
         id='services' className='services py-5'>
-        <div className='text-center '>
-          <h4 className='fs-30 fw-bolder'>XİDMƏTLƏRİMİZ</h4>
+        <div className='text-center pb-5'>
+          <h4 className='fs-27 fw-bolder'>XİDMƏTLƏRİMİZ</h4>
         </div>
-        <div className='container pt-4'>
+        {/* <div className='container pt-4'>
           <div className='d-flex justify-content-center align-items-center gap-3 flex-wrap text-black'>
             {
               servicesData.map((item) => (
@@ -108,39 +118,57 @@ const Home = () => {
                 </NavLink>
               ))}
           </div>
-        </div>
-      </section> */}
+        </div> */}
+        <div className="container">
+          <div className="row">
+            {
+              servicesData.map((item) => (
+                <div className="col-lg-3 col-md-4 col-sm-6 col-12 services-card" key={item.id}>
+                    <div className="card py-4">
+                      <div className="card-body">
+                        <div className='mb-4 card-icon d-flex justify-content-center align-items-center'>
+                          <CgWebsite className='fs-30 ' />
+                        </div>
+                        <p className="card-title mb-0 fw-semibold fs-20">{item.title}</p>
+                        <p className="card-text mb-0 py-3 fs-14">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                        <NavLink to={`/ServicesDetail/${item.id}`} className='text-decoration-none fw-medium card-view d-flex align-items-center gap-2'>View Details <FaArrowRight /></NavLink>
+                      </div>
+                    </div>
+                </div>
+              ))
+            }
 
-      <section
-      >
-        <CommentSlider />
+
+
+          </div>
+        </div>
       </section>
       <section className='home-blog py-5'>
         <div className='container'>
           <div className='home-blog-head d-flex align-items-center justify-content-between'>
             <div className='text-black'>
-              <p className='fs-18'>BLOQ</p>
-              <h4 className='fs-35'>Ən Son Blogumuz Nədir</h4>
+              <h4 className='fs-30'>Bloq</h4>
             </div>
             <div className='btn-home-blog'>
-              <a href='#/'>DAHA ÇOX BAXIN<FiArrowUpRight className='fs-22' /></a>
+              <a href='/Blog'>DAHA ÇOX<FiArrowUpRight className='fs-22' /></a>
             </div>
           </div>
           <div className='row py-5'>
             <div className='col-xl-4 col-lg-4 col-md-6 col-sm-12'>
               <div className='blog-card'>
-                <div className='card-body border p-30'>
+                <div className='card-body border'>
                   <p className='card-text'>20 dekabr 2022-ci il | İNKİŞAF</p>
                   <h5 className='card-title'>Siz hələ də rəqəmsal alətlərdən istifadə etmirsiniz?</h5>
                 </div>
                 <img src={blogimg_1} alt='blog-img' className="d-block w-100 img-fluid" />
-                <div className='p-30 border blog-card-end'>
-                  <a className='d-flex align-items-center gap-2 text-decoration-none'>DAHA ÇOX OXU <FiArrowUpRight className='fs-22 right-btn' /></a>
+                <div className='border blog-card-end'>
+                  <a href='/Blog' className='d-flex align-items-center gap-2 text-decoration-none'>DAHA ÇOX OXU <FiArrowUpRight className='fs-18 right-btn' /></a>
                 </div>
               </div>
             </div>
 
             <div className='col-xl-4 col-lg-4 col-md-6 col-12'>
+              
               <div className='blog-card'>
                 <div className='card-body border p-30'>
                   <p className='card-text'>20 dekabr 2022-ci il | BİZNES</p>
@@ -148,7 +176,7 @@ const Home = () => {
                 </div>
                 <img src={blogimg_2} alt='blog-img' className="d-block w-100 img-fluid" />
                 <div className='p-30 border blog-card-end'>
-                  <a className='d-flex align-items-center gap-2 text-decoration-none'>DAHA ÇOX OXU <FiArrowUpRight className='fs-22 right-btn' /></a>
+                  <a href='/Blog' className='d-flex align-items-center gap-2 text-decoration-none'>DAHA ÇOX OXU <FiArrowUpRight className='fs-18 right-btn' /></a>
                 </div>
               </div>
             </div>
@@ -161,13 +189,16 @@ const Home = () => {
                 </div>
                 <img src={blogimg_3} alt='blog-img' className="d-block w-100 img-fluid" />
                 <div className='p-30 border blog-card-end'>
-                  <a className='d-flex align-items-center gap-2 text-decoration-none'>DAHA ÇOX OXU <FiArrowUpRight className='fs-22 right-btn' /></a>
+                  <a href='/Blog' className='d-flex align-items-center gap-2 text-decoration-none'>DAHA ÇOX OXU <FiArrowUpRight className='fs-18 right-btn' /></a>
                 </div>
               </div>
             </div>
 
           </div>
         </div>
+      </section>
+      <section>
+        <CommentSlider />
       </section>
       {/* <section className='home-slide-section'>
         <div className='slide'>

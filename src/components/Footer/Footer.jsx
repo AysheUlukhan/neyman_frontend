@@ -29,7 +29,13 @@ const Footer = () => {
             <div className='col-lg-3 col-sm-6 mt-3'>
               <div className='single-box'>
                 <h5 className='mb-3'>Faydalı Linklər</h5>
-                <p className='mb-3'><NavLink to='/Portfolio'>Layihələrimiz</NavLink></p>
+                <p className='mb-2'><NavLink to='/'>Ana Səhifə</NavLink></p>
+                <p className='mb-2'><NavLink to='/About'>Haqqımızda</NavLink></p>
+                <p className='mb-2'><NavLink to='/Services'>Servislər</NavLink></p>
+                <p className='mb-2'><NavLink to='/Portfolio'>Layihələrimiz</NavLink></p>
+                <p className='mb-2'><NavLink to='/Blog'>Bloq</NavLink></p>
+                <p className='mb-2'><NavLink to='/Contact'>Əlaqə</NavLink></p>
+
                 <p><NavLink to='/Faq'>Faq</NavLink></p>
               </div>
             </div>

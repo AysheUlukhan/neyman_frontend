@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import { LuChevronRight } from "react-icons/lu";
-import sectionshap from '../../assets/images/svg/section-shap.svg';
 import { blogData } from '../../components/Api/BlogData/blogData';
 import { FaArrowLeft } from "react-icons/fa6";
 import { FaArrowRight } from "react-icons/fa6";
@@ -43,11 +42,8 @@ const Blog = () => {
         <a href='/' className='d-flex align-items-center gap-1'>ANA SƏHİFƏ <LuChevronRight /></a>
         <p>BLOQ</p>
       </div>
-      <div className='pt-40'>
-        <img src={sectionshap} alt='section shap' className="d-block mx-lg-auto img-fluid" />
-      </div>
-      <div className='d-flex justify-content-end py-5 search'>
-        <input onChange={(e) => setSearch(e.target.value)} type='text' className='w-25 p-2 search' placeholder='Axtar' />
+      <div className='d-flex justify-content-end pb-5 search'>
+        <input onChange={(e) => setSearch(e.target.value)} type='text' className='w-25 p-3 search' placeholder='Axtar' />
       </div>
       <div className='row row-gap-4 blog-card'>
         {
@@ -62,10 +58,10 @@ const Blog = () => {
             .map(post =>
               <NavLink className='col-xl-4 col-lg-4 col-md-6 col-sm-12 cards' key={post.id} to={`/BlogDetail/${post.id}`}>
                 <img src={post.image} className="d-block mx-lg-auto img-fluid blogImg" />
-                <div className='py-2 '>
+                <div className='py-2 fs-14'>
                   <span>{post.title} </span>| <span>{post.date}</span>
                 </div>
-                <h4 className='fw-bold'>{post.content}</h4>
+                <h4 className='fs-24'>{post.content}</h4>
 
               </NavLink>
             )

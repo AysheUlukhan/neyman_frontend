@@ -1,4 +1,5 @@
 import image_1 from '../../../assets/images/svg/businesses-logo-2.svg'
+import image_2 from '../../../assets/images/svg/businesses-logo-8.svg'
 
 export const partners =[
     {
@@ -8,7 +9,7 @@ export const partners =[
 
     {
         id: '2',
-        img: image_1
+        img: image_2
     },
 
     {

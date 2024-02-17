@@ -9,7 +9,7 @@ const commentC = () => {
         <div className='container testimonials'>
             <div className='testimonials-head'>
                 {/* <p className='fs-18'>Rəylər</p> */}
-                <h4 className='pb-5 testimonials-title text-center fs-30 fw-bolder'>MÜŞTƏRİLƏRİMİZİN RƏYLƏRİ</h4>
+                <h4 className='pb-5 testimonials-title text-center fs-27 fw-bolder'>MÜŞTƏRİLƏRİMİZİN RƏYLƏRİ</h4>
             </div>
             <Swiper
                 grabCursor={true}
@@ -64,7 +64,7 @@ const commentC = () => {
                                                 <img src={item.image} alt='img' />
                                             </div>
                                             <div>
-                                                <h4 className='text-24 font-medium leading-normal'>{item.name}</h4>
+                                                <h5 className='font-medium leading-normal'>{item.name}</h5>
                                                 <p className=''>{item.position}</p>
                                             </div>
                                         </div>

@@ -2,6 +2,7 @@ import React from 'react'
 import { LuChevronRight } from "react-icons/lu";
 import './About.css'
 import { partners } from '../../components/Api/Partners/partners';
+import PartnerSlider from '../../components/PartnersSlider/partnerSlider';
 
 const About = () => {
   return (
@@ -25,13 +26,14 @@ const About = () => {
         <div className='mt-5 partners'>
           <h4 className='text-center pb-5'>Partnyorlar</h4>
           <div className='row row-gap-3'>
-            {
+            {/* {
               partners.map((item) => (
                 <div key={item.id} className='col-lg-2 col-sm-6 col-md-2  col-6'>
                   <img src={item.img} alt="partner" />
                 </div>
               ))
-            }
+            } */}
+            <PartnerSlider/>
           </div>
         </div>
 

@@ -23,7 +23,7 @@ const Navbar = () => {
           <div>
             <NavLink to='/'><img src={logo} className='logo' alt='logo' /></NavLink>
           </div>
-          <div className='d-none d-xl-block d-xxl-block mt-3'>
+          <div className='d-none d-lg-block d-xl-block d-xxl-block mt-3'>
             <ul className='d-flex align-items-center gap-64'>
               <li>
                 <NavLink to='/About' className='nav-link fw-semibold '>Haqqımızda</NavLink>

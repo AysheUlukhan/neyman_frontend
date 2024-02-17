@@ -9,11 +9,11 @@
     font-weight: 500;
 }
 
-.blogDetail .left-related-posts .related-posts{
+/* .blogDetail .left-related-posts .related-posts{
     padding: 30px 30px 26px;
     background-color: var(--medium-blue);
     color: var(--white);
-}
+} */
 
 .blogDetail .left-related-posts h6{
     transition: all .5s;
@@ -21,4 +21,8 @@
 
 .blogDetail .left-related-posts h6:hover{
     color: var(--medium-blue);
+}
+
+.blogDetail .blog-post .dblog-img{
+    height: 450px !important;
 }

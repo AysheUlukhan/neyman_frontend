@@ -24,13 +24,10 @@ const Portfolio = () => {
         <a href='/' className='d-flex align-items-center gap-1'>ANA SƏHİFƏ <LuChevronRight /></a>
         <p>LAYİHƏLƏR</p>
       </div>
-      <div className='pt-40'>
-        <img src={sectionshap} alt='section shap' className="d-block mx-lg-auto img-fluid" />
-      </div>
       <div className='d-flex align-items-center justify-content-between portfolio-content py-5'>
         <div className='portfolio-content-head'>
           <h5 className='fs-18'>İŞLƏRİMİZİ KƏŞF EDİN</h5>
-          <h3 className='fs-48 fw-bold'>Ən Son Layihələr</h3>
+          <h3 className='fs-36 fw-bolder'>Ən Son Layihələr</h3>
         </div>
         <div>
           <ul className='d-flex column-gap-3'>
@@ -54,7 +51,7 @@ const Portfolio = () => {
                 </div>
                 <div className='py-3'>
                   <p>{item.title}</p>
-                  <a href='#/'>{item.content}</a>
+                  <a href='#/' className='fs-24'>{item.content}</a>
                 </div>
               </div>
             </div>
