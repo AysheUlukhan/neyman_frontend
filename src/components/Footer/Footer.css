@@ -12,7 +12,7 @@ footer .footer-icon:hover{
 }
 
 footer .single-box{
-    font-size: 18px;
+    font-size: 17px;
 }
 
 footer .single-box h5{
@@ -21,14 +21,14 @@ footer .single-box h5{
 }
 
 footer .single-box p{
-    color: var(--dark-liver);
+    color: var(--dark);
     font-weight: 400;
-    
+
 }
 
 footer .single-box a{
     text-decoration: none;
-    color: var(--dark-liver);
+    color: var(--dark);
 }
 
 footer .single-box input{
@@ -39,19 +39,9 @@ footer .single-box input{
 }
 
 footer .footer-end{
-    color: var(--white);
     font-weight: 500;
 }
 
-footer .footer-end a{
-    text-decoration: none;
-    color: var(--white);
-    transition: all .5s;
-}
-
-footer .footer-end a:hover{
-    color: var(--medium-blue);
-}
 
 @media (max-width:540px) {
     footer .footer-end .container{

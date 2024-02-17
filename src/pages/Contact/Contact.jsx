@@ -6,13 +6,11 @@ const Contact = () => {
   return (
     <div className='container contact'>
       <div className='contact-head pt-5'>
-        <p className='fs-18'>ƏLAQƏ</p>
-        <h4 className='fs-30 pt-3 contact-head-text'>Biz həmişə yeni istedadlı insanların axtarışındayıq. Komandamıza qoşulun.</h4>
+        <p className='fs-27'>Əlaqə</p>
       </div>
       
       <div className='row pt-5'>
         <div className='col-xl-6 col-lg-6 col-sm-12 col-12'>
-          <h4 className='fs-30'>Gəlin Birgə İşləməyə Başlayaq. Bizimlə əlaqə saxlayın!</h4>
           <p className='fs-18'>Bu gün işçilərin rifah ehtiyaclarını müzakirə etmək üçün əlaqə saxlayın. Zəhmət olmasa bizə zəng edin, e-poçt göndərin.</p>
           <div className='py-5'>
             <div>
@@ -21,18 +19,19 @@ const Contact = () => {
             </div>
             <div className='py-4'>
               <h4 className='fs-24 fw-bold'>E-poçt</h4>
-              <p className='fs-18'>info.neyman.e.t@gmail.com</p>
+              <a href="mailto:info.neyman.e.t@gmail.com">info.neyman.e.t@gmail.com</a>
             </div>
             <div>
               <h4 className='fs-24 fw-bold'>Zəng edin</h4>
-              <p className='fs-18'>+994 50 631 07 22</p>
+              <a href="tel:+994 50 631 07 22" className='d-block mb-1'>+994 50 631 07 22</a>
+              <a href="tel:+90 552 153 23 28">+90 552 153 23 28</a>
             </div>
           </div>
         </div>
         <div className='col-xl-6 col-lg-6 col-sm-12 col-12'>
           <div className='contact-form p-5 rounded-4'>
             <div className='pb-4'>
-              <h4 className='fs-30 font-bold '>Bizə bir xətt buraxın</h4>
+              <h4 className='fs-30 font-bold '></h4>
               {/* <p className='fs-18 font-medium'>E-poçt ünvanınız dərc olunmayacaq. Tələb olunan sahələr qeyd olunub *</p> */}
             </div>
             <form>

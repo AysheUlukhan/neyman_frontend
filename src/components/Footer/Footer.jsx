@@ -12,7 +12,8 @@ const Footer = () => {
   return (
     <div>
       <footer>
-        <div className="container py-5">
+        <div className="container pt-5">
+          <hr />
           <div className="row">
             <div className="col-lg-3 col-sm-6">
               <div className='single-box'>
@@ -59,14 +60,12 @@ const Footer = () => {
               </div>
             </div>
           </div>
+          <hr />
         </div>
-        <div className='bg-black py-2 footer-end'>
-          <div className='container d-flex justify-content-between'>
+        <div className='py-2 footer-end'>
+          <div className='container'>
             <div>
-              <p>Sudan Digital Studio 2024 © Copyright by <a href='#/'>Delicate Themes</a></p>
-            </div>
-            <div>
-              <a href='#/'>Terms of Use</a> | <a href='#/'>Privacy Policy</a>
+              <p>COPYRIGHT © 2024 by NET LLC</p>
             </div>
           </div>
         </div>
