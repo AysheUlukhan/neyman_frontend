@@ -7,7 +7,7 @@ export const commentData =[
     {
         id:1,
         title: 'Böyük iş',
-        comment: 'İndi sabah ölürlər, amma bir müddətlik. Qocalıqdakı kimi saf, vulputat müəllifi. Boğaz yatağına çox nifrət lazımdır. Bu xəstəliyin ev tapşırığını cizgi filminin tərtibçisi və tərtibçisi. Amma indi boğaz ağrısı',
+        comment: 'İndi sabah ölürlər, amma bir müddətlik. Qocalıqdakı kimi saf, vulputat müəllifi.',
         icon: commentIcon,
         image:commentImg,
         imagesvg:imgsvg,
@@ -18,7 +18,7 @@ export const commentData =[
     {
         id:2,
         title: 'Ən Yaxşı Yaradıcılıq Agentliyi!',
-        comment: 'Bürünc diamın yatağı kimdir? Bu yaltaq deyil, lakin. Siz indi futbol bürünc cizgi filmlərini tapacaqsınız. Mass scelerisque feugiat pretium diam massa purus bəzəmək üçün göl Ultrices pərəstişkarları üçün sabahkı cizgi filmlərinin əla elementidir.',
+        comment: 'Bürünc diamın yatağı kimdir? Bu yaltaq deyil, lakin. Siz indi futbol bürünc cizgi filmlərini tapacaqsınız.',
         icon: commentIcon,
         image:commentImg_2,
         imagesvg:imgsvg,
@@ -29,7 +29,7 @@ export const commentData =[
     {
         id:3,
         title: 'Böyük iş',
-        comment: 'İndi sabah ölürlər, amma bir müddətlik. Qocalıqdakı kimi saf, vulputat müəllifi. Boğaz yatağına çox nifrət lazımdır. Bu xəstəliyin ev tapşırığını cizgi filminin tərtibçisi və tərtibçisi. Amma indi boğaz ağrısı',
+        comment: 'İndi sabah ölürlər, amma bir müddətlik. Qocalıqdakı kimi saf, vulputat müəllifi. Boğaz yatağına çox nifrət lazımdır. ',
         icon: commentIcon,
         image:commentImg,
         imagesvg:imgsvg,
@@ -40,7 +40,7 @@ export const commentData =[
     {
         id:4,
         title: 'Ən Yaxşı Yaradıcılıq Agentliyi!',
-        comment: 'Bürünc diamın yatağı kimdir? Bu yaltaq deyil, lakin. Siz indi futbol bürünc cizgi filmlərini tapacaqsınız. Mass scelerisque feugiat pretium diam massa purus bəzəmək üçün göl Ultrices pərəstişkarları üçün sabahkı cizgi filmlərinin əla elementidir.',
+        comment: 'Bürünc diamın yatağı kimdir? Bu yaltaq deyil, lakin. Siz indi futbol bürünc cizgi filmlərini tapacaqsınız. ',
         icon: commentIcon,
         image:commentImg_2,
         imagesvg:imgsvg,

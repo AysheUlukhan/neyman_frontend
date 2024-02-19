@@ -13,6 +13,10 @@ p{
   cursor: pointer;
 }
 
+textarea {
+  resize: none;
+}
+
 :root{
   /* colors */
   --dark: #111111;

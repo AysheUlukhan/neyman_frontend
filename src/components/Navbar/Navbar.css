@@ -1,4 +1,5 @@
 @import url('../../index.css');
+
 nav {
     .logo {
         height: 100px;
@@ -15,6 +16,16 @@ nav {
         color: var(--medium-blue);
     }
    
+}
+
+nav .nav-drop-language{
+    display: none;
+}
+
+nav .nav-language:hover .nav-drop-language{
+    position: absolute;
+    display: block;
+    margin: 5px 0 0 -25px;
 }
 
 

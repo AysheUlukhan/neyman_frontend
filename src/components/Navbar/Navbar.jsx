@@ -24,7 +24,7 @@ const Navbar = () => {
             <NavLink to='/'><img src={logo} className='logo' alt='logo' /></NavLink>
           </div>
           <div className='d-none d-lg-block d-xl-block d-xxl-block mt-3'>
-            <ul className='d-flex align-items-center gap-64'>
+            <ul className='d-flex align-items-center gap-64 nav-lg'>
               <li>
                 <NavLink to='/About' className='nav-link fw-semibold '>Haqqımızda</NavLink>
               </li>
@@ -44,11 +44,32 @@ const Navbar = () => {
               <li>
                 <NavLink to='/Contact' className='nav-link fw-semibold '>Əlaqə</NavLink>
               </li>
-              <GrLanguage className='me-2 fs-20 cursor-pointer' />
+
+              <ul>
+                <li className='nav-language'><GrLanguage className='me-2 fs-20 cursor-pointer' />
+                  <ul className='nav-drop-language'>
+                    <li>Az</li>
+                    <li>En</li>
+                    <li>Tr</li>
+                  </ul>
+                </li>
+              </ul>
             </ul>
           </div>
           <div>
-            <HiMenuAlt1 className='fs-30 cursor-pointer' data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" />
+            <div className='d-flex'>
+              <ul className='d-d-inline-block d-lg-none d-xxl-none d-xl-none'>
+                <li className='nav-language'><GrLanguage className='me-2 fs-20 cursor-pointer' />
+                  <ul className='nav-drop-language'>
+                    <li>Az</li>
+                    <li>En</li>
+                    <li>Tr</li>
+                  </ul>
+                </li>
+              </ul>
+              {/* <GrLanguage className='me-2 fs-20 cursor-pointer d-d-inline-block d-lg-none d-xxl-none d-xl-none' /> */}
+              <HiMenuAlt1 className='fs-30 cursor-pointer' data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" />
+            </div>
 
             <div className="offcanvas offcanvas-end" tabIndex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
               <div className="offcanvas-header">

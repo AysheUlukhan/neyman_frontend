@@ -133,6 +133,10 @@
     font-size: 15px;
 }
 
+.home .home-blog .blog-card img{
+    height: 300px;
+}
+
 
 
 .home-blog .blog-card:hover img {
@@ -222,6 +226,9 @@
     .home .hero-text {
         font-size: 48px !important;
 
+    }
+    .home .home-blog .row {
+        gap: 15px;
     }
 
 }
@@ -321,9 +328,7 @@
         padding: 5px 0;
     }
 
-    .home .home-blog .row {
-        gap: 15px;
-    }
+
 
 }
 

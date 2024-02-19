@@ -4,6 +4,9 @@ import 'swiper/css';
 import 'swiper/css/free-mode';
 import { commentData } from '../Api/CommentData/commentData'
 import SwiperButton from './SwiperNavButton/SwiperButton';
+import './commentC.css'
+import { BiSolidQuoteLeft } from "react-icons/bi";
+
 const commentC = () => {
     return (
         <div className='container testimonials'>
@@ -41,25 +44,25 @@ const commentC = () => {
                     },
                     1280: {
                         spaceBetween: 70,
-                        slidesPerView: 2,
+                        slidesPerView: 3,
                     },
                 }}
             >
-                <SwiperButton/>
+                {/* <SwiperButton/> */}
 
                 {
                     commentData.map((item) => (
                             <SwiperSlide key={item.id}>
-                                    <div className='col-xl-12'>
+                                    <div className='col-xl-12 comment-card'>
                                         <div className='d-flex align-items-center gap-3'>
-                                            <img src={item.icon} />
-                                            <h5>{item.title}</h5>
+                                            {/* <img src={item.icon} /> */}
+                                            <BiSolidQuoteLeft className='comment-card-icon'/>
+                                            {/* <h5>{item.title}</h5> */}
                                         </div>
-                                        <div className='pt-20'>
-                                            <p className=''>{item.comment}</p>
-                                            <img src={item.imagesvg} alt='img' className='pt-20 d-block mx-lg-auto img-fluid w-100' />
+                                        <div className='pt-20 comment-text'>
+                                            <p>{item.comment}</p>
                                         </div>
-                                        <div className='d-flex align-items-center gap-3 pt-20'>
+                                        <div className='d-flex align-items-center gap-3 comment-card-end'>
                                             <div>
                                                 <img src={item.image} alt='img' />
                                             </div>

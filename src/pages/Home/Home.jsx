@@ -4,13 +4,11 @@ import { accordionData } from '../../components/Api/AccordionData/accordionData'
 import { FaPlus } from "react-icons/fa6";
 import { FaMinus } from "react-icons/fa6";
 import { FiArrowUpRight } from "react-icons/fi";
-import blogimg_1 from '../../assets/images/home-page-img/blog-img-1.png';
-import blogimg_2 from '../../assets/images/home-page-img/blog-img-2.png';
-import blogimg_3 from '../../assets/images/home-page-img/blog-img-3.png';
 import heroimg_3 from '../../assets/images/home-page-img/hero-image-3.jpg';
 import CommentSlider from '../../components/Commentcarousel/commentC';
 import { servicesData } from '../../components/Api/ServicesData/servicesData';
 import { NavLink } from 'react-router-dom';
+import { blogData } from '../../components/Api/BlogData/blogData';
 
 import { TypeAnimation } from 'react-type-animation';
 // import { NavLink } from 'react-router-dom';
@@ -124,16 +122,16 @@ const Home = () => {
             {
               servicesData.map((item) => (
                 <div className="col-lg-3 col-md-4 col-sm-6 col-12 services-card" key={item.id}>
-                    <div className="card py-4">
-                      <div className="card-body">
-                        <div className='mb-4 card-icon d-flex justify-content-center align-items-center'>
-                          <CgWebsite className='fs-30 ' />
-                        </div>
-                        <p className="card-title mb-0 fw-semibold fs-20">{item.title}</p>
-                        <p className="card-text mb-0 py-3 fs-14">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
-                        <NavLink to={`/ServicesDetail/${item.id}`} className='text-decoration-none fw-medium card-view d-flex align-items-center gap-2'>View Details <FaArrowRight /></NavLink>
+                  <div className="card py-4">
+                    <div className="card-body">
+                      <div className='mb-4 card-icon d-flex justify-content-center align-items-center'>
+                        <CgWebsite className='fs-30 ' />
                       </div>
+                      <p className="card-title mb-0 fw-semibold fs-20">{item.title}</p>
+                      <p className="card-text mb-0 py-3 fs-14">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                      <NavLink to={`/ServicesDetail/${item.id}`} className='text-decoration-none fw-medium card-view d-flex align-items-center gap-2'>View Details <FaArrowRight /></NavLink>
                     </div>
+                  </div>
                 </div>
               ))
             }
@@ -154,20 +152,27 @@ const Home = () => {
             </div>
           </div>
           <div className='row py-5'>
-            <div className='col-xl-4 col-lg-4 col-md-6 col-sm-12'>
-              <div className='blog-card'>
-                <div className='card-body border'>
-                  <p className='card-text'>20 dekabr 2022-ci il | İNKİŞAF</p>
-                  <h5 className='card-title'>Siz hələ də rəqəmsal alətlərdən istifadə etmirsiniz?</h5>
-                </div>
-                <img src={blogimg_1} alt='blog-img' className="d-block w-100 img-fluid" />
-                <div className='border blog-card-end'>
-                  <a href='/Blog' className='d-flex align-items-center gap-2 text-decoration-none'>DAHA ÇOX OXU <FiArrowUpRight className='fs-18 right-btn' /></a>
-                </div>
-              </div>
-            </div>
+            {
+              blogData.slice(0, 3).map((item) => (
+                <div className='col-xl-4 col-lg-4 col-md-6 col-sm-12' key={item.id}>
 
-            <div className='col-xl-4 col-lg-4 col-md-6 col-12'>
+                  <div className='blog-card'>
+                    <div className='card-body border'>
+                      {/* <p className='card-text'>20 dekabr 2022-ci il | İNKİŞAF</p> */}
+                      <span className='card-text'>{item.title} |</span> <span className='card-text'>{item.date}</span>
+                      <h5 className='card-title'>{item.content}</h5>
+                      {/* <h5 className='card-title'>Siz hələ də rəqəmsal alətlərdən istifadə etmirsiniz?</h5> */}
+                    </div>
+                    <img src={item.image} alt='blog-img' className="d-block w-100 img-fluid" />
+                    <div className='border blog-card-end'>
+                      <NavLink key={item.id} to={`/BlogDetail/${item.id}`} href='/Blog' className='d-flex align-items-center gap-2 text-decoration-none'>DAHA ÇOX OXU <FiArrowUpRight className='fs-18 right-btn' /></NavLink>
+                    </div>
+                  </div>
+                </div>
+              ))
+            }
+
+            {/* <div className='col-xl-4 col-lg-4 col-md-6 col-12'>
               
               <div className='blog-card'>
                 <div className='card-body border p-30'>
@@ -192,7 +197,7 @@ const Home = () => {
                   <a href='/Blog' className='d-flex align-items-center gap-2 text-decoration-none'>DAHA ÇOX OXU <FiArrowUpRight className='fs-18 right-btn' /></a>
                 </div>
               </div>
-            </div>
+            </div> */}
 
           </div>
         </div>
@@ -200,30 +205,6 @@ const Home = () => {
       <section>
         <CommentSlider />
       </section>
-      {/* <section className='home-slide-section'>
-        <div className='slide'>
-          <ul className='d-flex gap-40 fs-35 home-slide lh-sm fw-bold'>
-            <li><a href='mailto:info.neyman.e.t@gmail.com'>info.neyman.e.t@gmail.com</a></li>
-            <li><a href='tel:+994 50 631 07 22'>+994 50 631 07 22</a></li>
-            <li><a href='mailto:info.neyman.e.t@gmail.com'>info.neyman.e.t@gmail.com</a></li>
-            <li><a href='tel:+994 50 631 07 22'>+994 50 631 07 22</a></li>
-            <li><a href='mailto:info.neyman.e.t@gmail.com'>info.neyman.e.t@gmail.com</a></li>
-            <li><a href='tel:+994 50 631 07 22'>+994 50 631 07 22</a></li>
-          </ul>
-        </div>
-        <div className='slider pt-20'>
-          <ul className='d-flex gap-40 fs-35 home-slider lh-sm fw-bold'>
-            <li><a href='#/'>Rəqəmsal Marketinq</a></li>
-            <li><a href='#/'>İstifadəçi Təcrübəsi Dizaynı</a></li>
-            <li><a href='#/'>Yaradıcı Dizayn</a></li>
-            <li><a href='#/'>İnkişaf</a></li>
-            <li><a href='#/'>Rəqəmsal Marketinq</a></li>
-            <li><a href='#/'>İstifadəçi Təcrübəsi Dizaynı</a></li>
-
-          </ul>
-        </div>
-        <hr />
-      </section> */}
     </div>
   )
 }

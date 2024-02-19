@@ -46,7 +46,7 @@ const Portfolio = () => {
                 <div className='image'>
                   <img src={item.image} className="d-block mx-lg-auto img-fluid portfolioImg" />
                   <div className='content'>
-                    <img src={rightoverlay} />
+                  <p className='fs-24'>{item.content}</p>
                   </div>
                 </div>
                 <div className='py-3'>

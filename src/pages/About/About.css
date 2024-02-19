@@ -21,18 +21,18 @@
     height: 80px;
 }
 
-.form-offer{
+.about .form-offer{
     background-color: #E6E7EC;
     padding: 100px 0;
 }
 
-.form-offer .form-offer-content{
+.about .form-offer .form-offer-content{
     background-color: white;
     border-radius: 12px;
     padding: 50px;
 }
 
-.form-offer form textarea{
+.about .form-offer form textarea{
     background-color: #F7F7F5;
     border-radius: 12px;
     padding: 15px;
@@ -40,7 +40,7 @@
     outline: none;
 }
 
-.form-offer form input{
+.about .form-offer form input{
     background-color: #F7F7F5;
     border-radius: 12px;
     padding: 15px;
@@ -48,7 +48,7 @@
     outline: none;
 }
 
-.form-offer form button{
+.about .form-offer form button{
     background-color: var(--medium-blue);
     border: none;
     border-radius: 12px;
@@ -56,12 +56,17 @@
     padding: 15px 0;
 }
 
+.about .worth-section img{
+    width: 72px;
+    height: 72px;
+}
+
 @media (max-width:540px) {
     .about .partners img{
         width: 119px;
         height: 80px;
     }
-    .form-offer .form-offer-content h4{
+    .about .form-offer .form-offer-content h4{
         font-size: 20px;
     }
 
@@ -70,23 +75,27 @@
 
 @media (max-width:1024px) {
 
-    .form-offer{
+    .about .form-offer{
         padding: 60px 0;
     }
 
-    .form-offer .form-offer-content{
+    .about .form-offer .form-offer-content{
         padding: 20px;
     }
 
-    .form-offer .form-offer-content form .form-controls{
+    .about .form-offer .form-offer-content form .form-controls{
         margin-top: 0 !important;
     }
 
-    .form-offer .form-offer-content form input, button{
+    .about .form-offer .form-offer-content form input{
         margin-top: 20px !important;
     }
 
-    .form-offer .form-offer-content form{
+    .about .form-offer .form-offer-content form button{
+        margin-top: 20px !important;
+    }
+
+    .about .form-offer .form-offer-content form{
         margin-top: 30px;
     }
 }
