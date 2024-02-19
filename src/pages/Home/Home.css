@@ -230,6 +230,7 @@
     .home .home-blog .row {
         gap: 15px;
     }
+   
 
 }
 
@@ -249,6 +250,7 @@
     .home .benefit .hero-img {
         padding-top: 40px;
     }
+   
 }
 
 @media (max-width:426px) {

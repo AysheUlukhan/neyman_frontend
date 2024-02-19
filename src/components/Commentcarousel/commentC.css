@@ -1,30 +1,31 @@
-.testimonials .comment-text p{
+.testimonials .comment-text p {
     height: 100px;
 }
 
-.testimonials .comment-card{
-    background-color: #DDECFD;
+.testimonials .comment-card {
+    /* background-color: #DDECFD; */
     background-image: url('../../assets/images/svg/feedback__testimonial__single.svg');
     border-radius: 8px;
     padding: 35px;
     transition: all .5s;
     height: 300px;
+    border: 1px solid #dedcdc;
 }
 
-.testimonials .comment-card .comment-card-end{
+.testimonials .comment-card .comment-card-end {
     padding-top: 30px;
 }
 
-.testimonials .comment-card .comment-card-end img{
+.testimonials .comment-card .comment-card-end img {
     width: 60px;
     height: 60px;
 }
 
-.testimonials .comment-card:hover{
+.testimonials .comment-card:hover {
     background-color: var(--medium-blue);
     color: var(--white);
 }
 
-.testimonials .comment-card .comment-card-icon{
+.testimonials .comment-card .comment-card-icon {
     font-size: 30px;
 }
