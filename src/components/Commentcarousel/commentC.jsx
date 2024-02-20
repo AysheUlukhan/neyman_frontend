@@ -18,10 +18,7 @@ const commentC = () => {
                 grabCursor={true}
                 slidesPerView='2'
                 spaceBetween={30}
-                loop={true}
-                autoplay={{
-                    delay: 2000
-                }}
+                
 
                 breakpoints={{
                     0: {

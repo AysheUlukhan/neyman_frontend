@@ -77,7 +77,7 @@ const Navbar = () => {
                 <AiOutlineClose className='fs-30 cursor-pointer' data-bs-dismiss="offcanvas" aria-label="Close" />
               </div>
               <div className="offcanvas-body">
-                <div className='d-xl-none d-xxl-none d-lg-none d-sm-block d-md-block '>
+                <div className='d-xl-none d-xxl-none d-lg-none d-sm-block d-md-block res-nav'>
                   <ul>
                     <li className='h-60'>
                       <NavLink to='/' className='nav-link'>Ana Səhifə</NavLink>

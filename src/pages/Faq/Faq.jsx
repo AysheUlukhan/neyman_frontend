@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import bgFaq from '../../assets/images/faq-page/faq-bg-img.png';
 import { faqData } from '../../components/Api/FaqAccordionData/faqData';
 import { FiArrowUpRight } from "react-icons/fi";
 import { FiArrowDownRight } from "react-icons/fi";
@@ -19,8 +18,6 @@ const Faq = () => {
         <div className='container faq'>
             <div className='py-5 faq-head'>
                 <p className='fs-18 pb-4'>Tez-tez verilən suallar</p>
-                <h4 className='fs-48'>Ullamcorper suspendisse ornare in congue nollam. Arcu turpis semper nec nisi.</h4>
-                <img src={bgFaq} alt="bg Faq" className='pt-5 d-block mx-lg-auto img-fluid' />
             </div>
             <div className='wrapper'>
                 <div className='accordion'>
