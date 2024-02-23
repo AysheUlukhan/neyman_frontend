@@ -117,6 +117,12 @@
     transform: translateY(0);
 }
 
+.portfolio .wrapper{
+    background-color: #F5F5F5;
+    padding: 20px;
+    border-radius: 8px;
+}
+
 
 .portfolio .form-offer {
     background-color: #E6E7EC;

@@ -72,11 +72,10 @@ const Portfolio = () => {
                       <a href="#/">Veb Sayta Keçid <i className="fa-solid fa-eye"></i></a>
                     </div>
                   </div>
-                  <div className='py-3'>
-                    <p>{item.title}</p>
-                    <a href='#/' className='fs-24'>{item.content}</a>
-                  </div>
                 </div>
+                  <div className='py-2'>
+                    <p className='fs-18'>{item.title}</p>
+                  </div>
               </div>
 
             ))
