@@ -30,7 +30,7 @@ export const blogData = [
     {
         id: '3',
         image: blog_3,
-        title: 'DESIGN ',
+        title: 'DESIGN',
         date: '20 DEC 2023',
         content: 'Top Web Design Tools & Apps',
         text: '3. Proin fermentum enim orci enim orci quis elementum. Lacus porta mi duis vitae neque suspendisse. Dignissim eget leo fermentum odio amet nulla dui neque. Integer at cras purus massa orci viverra. Et viverra mauris auctor commodo adipiscing amet elementum suscipit. Tincidunt sit eget augue eu tortor libero aliquam velit. At diam vel purus ac tortor adipiscing quis consequat vel. Consequat quis tortor mauris vulputate purus.'

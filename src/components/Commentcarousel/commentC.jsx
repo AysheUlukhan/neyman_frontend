@@ -18,7 +18,7 @@ const commentC = () => {
                 grabCursor={true}
                 slidesPerView='2'
                 spaceBetween={30}
-                
+                loop={true}
 
                 breakpoints={{
                     0: {
@@ -32,12 +32,12 @@ const commentC = () => {
                     },
                     768: {
                         spaceBetween: 15,
-                        slidesPerView: 1,
+                        slidesPerView: 2,
                     },
 
                     912: {
                         spaceBetween: 15,
-                        slidesPerView: 1,
+                        slidesPerView: 3,
                     },
                     1280: {
                         spaceBetween: 70,

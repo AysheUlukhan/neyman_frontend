@@ -1,3 +1,10 @@
+import image_1 from '../../../assets/images/pg2-page/pg2-design-img-1.png'
+import image_2 from '../../../assets/images/pg2-page/pg2-design-img-2.png'
+import image_3 from '../../../assets/images/pg2-page/pg2-devlopment-img-1.png'
+import image_4 from '../../../assets/images/pg2-page/pg2-markting-img-1.png'
+import image_5 from '../../../assets/images/pg2-page/pg2-markting-img-2.png'
+import image_6 from '../../../assets/images/pg2-page/pg2-markting-img-3.png'
+
 export const servicesData =[
     {
         id:'1',
@@ -9,6 +16,7 @@ export const servicesData =[
         content_2: 'Düzgün şəkildə qurulmuş bir səhifəlik landing page hər hansı bir məhsul və ya xidmətinizin satışına necə müsbət təsir etməsini təsəvvür edin.',
         name_3: 'Adaptiv Dizayn',
         content_3: 'Dünyada internet istifadəçilərinin 95% saytlara mobil telefon vasitəsilə daxil olduğunu nəzərə alaraq, təmsil etdiyiniz şirkətin saytının adaptiv olması mütləqdir.',
+        image: image_1
     },
 
     {
@@ -21,6 +29,7 @@ export const servicesData =[
         content_2: 'Düzgün şəkildə qurulmuş bir səhifəlik landing page hər hansı bir məhsul və ya xidmətinizin satışına necə müsbət təsir etməsini təsəvvür edin.',
         name_3: 'Adaptiv Dizayn',
         content_3: 'Dünyada internet istifadəçilərinin 95% saytlara mobil telefon vasitəsilə daxil olduğunu nəzərə alaraq, təmsil etdiyiniz şirkətin saytının adaptiv olması mütləqdir.',
+        image: image_2
     },
 
     {
@@ -33,6 +42,7 @@ export const servicesData =[
         content_2: 'Düzgün şəkildə qurulmuş bir səhifəlik landing page hər hansı bir məhsul və ya xidmətinizin satışına necə müsbət təsir etməsini təsəvvür edin.',
         name_3: 'Adaptiv Dizayn',
         content_3: 'Dünyada internet istifadəçilərinin 95% saytlara mobil telefon vasitəsilə daxil olduğunu nəzərə alaraq, təmsil etdiyiniz şirkətin saytının adaptiv olması mütləqdir.',
+        image: image_3
     },
 
     {
@@ -45,6 +55,7 @@ export const servicesData =[
         content_2: 'Düzgün şəkildə qurulmuş bir səhifəlik landing page hər hansı bir məhsul və ya xidmətinizin satışına necə müsbət təsir etməsini təsəvvür edin.',
         name_3: 'Adaptiv Dizayn',
         content_3: 'Dünyada internet istifadəçilərinin 95% saytlara mobil telefon vasitəsilə daxil olduğunu nəzərə alaraq, təmsil etdiyiniz şirkətin saytının adaptiv olması mütləqdir.',
+        image: image_4
     },
 
     {
@@ -57,6 +68,7 @@ export const servicesData =[
         content_2: 'Düzgün şəkildə qurulmuş bir səhifəlik landing page hər hansı bir məhsul və ya xidmətinizin satışına necə müsbət təsir etməsini təsəvvür edin.',
         name_3: 'Adaptiv Dizayn',
         content_3: 'Dünyada internet istifadəçilərinin 95% saytlara mobil telefon vasitəsilə daxil olduğunu nəzərə alaraq, təmsil etdiyiniz şirkətin saytının adaptiv olması mütləqdir.',
+        image: image_5
     },
 
     {
@@ -69,6 +81,7 @@ export const servicesData =[
         content_2: 'Düzgün şəkildə qurulmuş bir səhifəlik landing page hər hansı bir məhsul və ya xidmətinizin satışına necə müsbət təsir etməsini təsəvvür edin.',
         name_3: 'Adaptiv Dizayn',
         content_3: 'Dünyada internet istifadəçilərinin 95% saytlara mobil telefon vasitəsilə daxil olduğunu nəzərə alaraq, təmsil etdiyiniz şirkətin saytının adaptiv olması mütləqdir.',
+        image: image_6
     },
 
     {
@@ -81,6 +94,7 @@ export const servicesData =[
         content_2: 'Düzgün şəkildə qurulmuş bir səhifəlik landing page hər hansı bir məhsul və ya xidmətinizin satışına necə müsbət təsir etməsini təsəvvür edin.',
         name_3: 'Adaptiv Dizayn',
         content_3: 'Dünyada internet istifadəçilərinin 95% saytlara mobil telefon vasitəsilə daxil olduğunu nəzərə alaraq, təmsil etdiyiniz şirkətin saytının adaptiv olması mütləqdir.',
+        image: image_6
     },
     {
         id:'8',
@@ -92,6 +106,7 @@ export const servicesData =[
         content_2: 'Düzgün şəkildə qurulmuş bir səhifəlik landing page hər hansı bir məhsul və ya xidmətinizin satışına necə müsbət təsir etməsini təsəvvür edin.',
         name_3: 'Adaptiv Dizayn',
         content_3: 'Dünyada internet istifadəçilərinin 95% saytlara mobil telefon vasitəsilə daxil olduğunu nəzərə alaraq, təmsil etdiyiniz şirkətin saytının adaptiv olması mütləqdir.',
+        image: image_6
     },
     {
         id:'9',
@@ -103,5 +118,6 @@ export const servicesData =[
         content_2: 'Düzgün şəkildə qurulmuş bir səhifəlik landing page hər hansı bir məhsul və ya xidmətinizin satışına necə müsbət təsir etməsini təsəvvür edin.',
         name_3: 'Adaptiv Dizayn',
         content_3: 'Dünyada internet istifadəçilərinin 95% saytlara mobil telefon vasitəsilə daxil olduğunu nəzərə alaraq, təmsil etdiyiniz şirkətin saytının adaptiv olması mütləqdir.',
+        image: image_6
     }
 ]

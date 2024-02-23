@@ -26,3 +26,8 @@
 .blogDetail .blog-post .dblog-img{
     height: 450px !important;
 }
+
+.blogDetail .left-related-posts img{
+    width: 96px;
+    height: 96px;
+}

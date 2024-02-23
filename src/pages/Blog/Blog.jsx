@@ -45,7 +45,7 @@ const Blog = () => {
       <div className='d-flex justify-content-end pb-5 search'>
         <input onChange={(e) => setSearch(e.target.value)} type='text' className='w-25 p-3 search' placeholder='Axtar' />
       </div>
-      <div className='row row-gap-4 blog-card'>
+      <div className='row row-gap-5 blog-card'>
         {
 
           records.filter((post) => {
@@ -56,14 +56,23 @@ const Blog = () => {
 
 
             .map(post =>
-              <NavLink className='col-xl-4 col-lg-4 col-md-6 col-sm-12 cards' key={post.id} to={`/BlogDetail/${post.id}`}>
-                <img src={post.image} className="d-block mx-lg-auto img-fluid blogImg" />
-                <div className='py-2 fs-14'>
-                  <span>{post.title} </span>| <span>{post.date}</span>
-                </div>
-                <h4 className='fs-24'>{post.content}</h4>
+              <div className='col-xl-4 col-lg-4 col-md-6 col-sm-12 cards' key={post.id}>
+                <div className="card">
+                  <div className='blogImg'>
 
-              </NavLink>
+                    <img src={post.image} className="d-block mx-lg-auto img-fluid " />
+                  </div>
+                  <div className="card-body text-center">
+                    <div className='py-2 fs-14'>
+                      <span>{post.title} </span>| <span>{post.date}</span>
+                    </div>
+                    <h4 className='fs-24'>{post.content}</h4>
+                    <NavLink key={post.id} to={`/BlogDetail/${post.id}`}>
+                      <p className='read '>Ətraflı Oxu <span><FaArrowRight /></span></p>
+                    </NavLink>
+                  </div>
+                </div>
+              </div>
             )
         }
 

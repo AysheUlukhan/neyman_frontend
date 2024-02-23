@@ -1,3 +1,95 @@
+.contact .contact-head a{
+    text-decoration: none;
+    color: var(--dark);
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.contact .contact-head p{
+    color: var(--medium-blue);
+    font-weight: 500;
+}
+
+.contact .contactImg{
+    position: relative;
+    display: block;
+}
+
+.contact .contact-icon{
+    width: 80px;
+    height: 80px;
+    background-color: var(--cultured);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+}
+
+.contact .contactImg .img::before{
+    content: "";
+    position: absolute;
+    top: 28px;
+    left: -17px;
+    bottom: 32px;
+    width: 30px;
+    background-color: var(--medium-blue);
+}
+
+.contact .contact-address{
+    margin-left: 100px;
+}
+
+.contact .contact-address span{
+    font-size: 15px;
+    color: var(--dark-liver);
+}
+
+.contact .contact-address a{
+    font-size: 17px;
+}
+
+.contact .contact-address p{
+    font-size: 17px;
+}
+
+.contact .contact-address i{
+    color: var(--medium-blue);
+    font-size: 22px;
+}
+
+.contact .contact-sosial-icons{
+    border: 1px solid var(--medium-blue);
+    border-radius: 100%;
+    padding: 10px 15px;
+    transition: all .5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.contact .fa{
+    padding: 10px 18px !important;
+}
+
+.contact .contact-sosial-icons i{
+    color: var(--medium-blue);
+}
+
+.contact .contact-sosial-icons:hover i{
+    color: var(--white) !important;
+
+}
+
+.contact .contact-sosial-icons:hover{
+    background-color: var(--medium-blue);
+}
+
+.contact .sosial-icons{
+    gap: 15px;
+}
+
+
 .contact .contact-form{
     background-color: var(--cultured);
 }
@@ -41,5 +133,24 @@
 
     .contact .contact-form{
         padding: 15px !important;
+    }
+
+    .contact .contact-address{
+        padding-top: 40px;
+    }
+
+    .contact .sosial-icons{
+        gap: 10px !important;
+    }
+
+    .contact .sosial-icons .contact-sosial-icons{
+        padding: 10px 15px;
+    }
+}
+
+
+@media (max-width:912px) {
+    .contact .contact-address{
+        margin-left: 0;
     }
 }

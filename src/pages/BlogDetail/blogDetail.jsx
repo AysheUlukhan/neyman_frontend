@@ -1,13 +1,17 @@
 import React from 'react';
 import { blogData } from '../../components/Api/BlogData/blogData';
-import { useParams } from 'react-router-dom';
+import { NavLink, useParams } from 'react-router-dom';
 import { LuChevronRight } from "react-icons/lu";
-import sectionshap from '../../assets/images/svg/section-shap.svg';
 import './blogDetail.css'
 
 const blogDetail = () => {
   const { id } = useParams();
   let myDetailedBlog = blogData.find((item) => item.id === id)
+
+  const filteredCategory = blogData.filter((item) => {
+    return myDetailedBlog.title === item.title
+  })
+
   return (
     <div className='container blogDetail'>
       <div className='d-flex align-items-center py-5 blogDetail-head'>
@@ -17,18 +21,13 @@ const blogDetail = () => {
       </div>
       <div className="row g-lg-5 py-5">
         <div className="col-lg-8 col-sm-12 col-12">
-
           <article className="blog-post">
             <img src={myDetailedBlog.image} className='w-100 h-25 d-block mx-lg-auto img-fluid dblog-img' alt="detailblog" />
             <div className='py-3'><span>{myDetailedBlog.title}</span> | <span>{myDetailedBlog.date}</span></div>
             <h3>{myDetailedBlog.content}</h3>
             <p className='pt-3'>{myDetailedBlog.text}</p>
-
           </article>
-
-
         </div>
-
         <div className="col-lg-4 col-sm-12 col-12 left-related-posts">
           <div className="sticky-top">
 
@@ -37,16 +36,20 @@ const blogDetail = () => {
                 <h4>Əlaqədar Yazılar</h4>
               </div>
               <ul className="list-unstyled">
-                <li>
-                  <a className="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top" href="#">
-                    <svg className="bd-placeholder-img" width="100%" height="96" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"></rect></svg>
-                    <div className="col-lg-8">
-                      <small className="text-body-secondary">January 15, 2023</small>
-                      <h6 className="mb-0">Example blog post title</h6>
-                    </div>
-                  </a>
-                </li>
-                <li>
+                {
+                  filteredCategory.slice(0, 3).map((item) => (
+                    <NavLink className='text-decoration-none'  to={`/BlogDetail/${item.id}`}>
+                      <a className="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top" href="#">
+                        <img src={item.image} className='d-block mx-lg-auto img-fluid dblog-img' alt="detailblog" />
+                        <div className="col-lg-8">
+                          <small className="text-body-secondary"><span>{item.title}</span> | <span>{item.date}</span></small>
+                          <h6 className="mb-0">{item.content}</h6>
+                        </div>
+                      </a>
+                    </NavLink>
+                  ))
+                }
+                {/* <li>
                   <a className="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top" href="#">
                     <svg className="bd-placeholder-img" width="100%" height="96" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"></rect></svg>
                     <div className="col-lg-8">
@@ -63,7 +66,7 @@ const blogDetail = () => {
                       <h6 className="mb-0">Longer blog post title: This one has multiple lines!</h6>
                     </div>
                   </a>
-                </li>
+                </li> */}
               </ul>
             </div>
 
