@@ -2,6 +2,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import Navbar from "./components/Navbar/Navbar"
 import Home from "./pages/Home/Home"
+import About from "./pages/About/About"
 import Services from "./pages/Services/Services"
 import Portfolio from "./pages/Portfolio/Portfolio"
 import Blog from "./pages/Blog/Blog"
@@ -11,7 +12,7 @@ import BlogDetail from "./pages/BlogDetail/blogDetail"
 import Faq from "./pages/Faq/Faq"
 import ServicesDetail from "./pages/ServicesDetail/servicesDetail"
 import ServicesNavDetail from "./pages/ServicesDetail/servicesNavDetail"
-import About from "./pages/About/About"
+import PortfolioDetail from "./pages/PortfolioDetail/portfolioDetail"
 
 function App() {
 
@@ -29,6 +30,7 @@ function App() {
         <Route path="Faq" element={<Faq/>}/>
         <Route path="/ServicesDetail/:id" element={<ServicesDetail/>}/>
         <Route path="/ServicesNavDetail/:id" element={<ServicesNavDetail/>}/>
+        <Route path="/PortfolioDetail/:id" element={<PortfolioDetail/>}/>
       </Routes>
       <Footer/>
     </div>

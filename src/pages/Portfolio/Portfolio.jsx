@@ -3,6 +3,7 @@ import { LuChevronRight } from "react-icons/lu";
 import './Portfolio.css';
 // import { portfolioData } from '../../components/Api/PortfolioData/portfolioData';
 import { servicesData } from '../../components/Api/ServicesData/servicesData';
+import { NavLink } from 'react-router-dom';
 
 const Portfolio = () => {
   const [data, setData] = useState([]);
@@ -70,12 +71,13 @@ const Portfolio = () => {
                     <div className='content'>
                       {/* <p className='fs-24'>{item.content}</p> */}
                       <a href="#/">Veb Sayta Keçid <i className="fa-solid fa-eye"></i></a>
+                      <NavLink to={`/PortfolioDetail/${item.id}`} href="#/">Yaxından Bax <i className="fa-solid fa-eye"></i></NavLink>
                     </div>
                   </div>
                 </div>
-                  <div className='py-2'>
+                  {/* <div className='py-2'>
                     <p className='fs-18'>{item.title}</p>
-                  </div>
+                  </div> */}
               </div>
 
             ))

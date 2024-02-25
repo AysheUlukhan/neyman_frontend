@@ -1,0 +1,10 @@
+.portfolio_detail .portfolio_detail_head a{
+    text-decoration: none;
+    color: var(--dark);
+    font-weight: 500;
+}
+
+.portfolio_detail .portfolio_detail_head p{
+    color: var(--medium-blue);
+    font-weight: 500;
+}

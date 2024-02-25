@@ -156,7 +156,6 @@ const Home = () => {
             {
               blogData.slice(0, 3).map((item) => (
                 <div className='col-xl-4 col-lg-4 col-md-6 col-sm-12' key={item.id}>
-
                   <div className='blog-card'>
                     <div className='card-body border'>
                       {/* <p className='card-text'>20 dekabr 2022-ci il | İNKİŞAF</p> */}
