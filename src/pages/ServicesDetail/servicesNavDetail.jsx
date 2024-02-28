@@ -17,7 +17,6 @@ const servicesNavDetail = () => {
                 </div>
                 <div className="row g-lg-5 py-5">
                     <div className="col-md-8">
-
                         <article>
                             <h2 className="fw-bold">{myDetailedNavServices.title}</h2>
                             <p className='pt-3'>{myDetailedNavServices.info}</p>
@@ -33,7 +32,7 @@ const servicesNavDetail = () => {
                             <div className='services-post'>
                                 <h4>{myDetailedNavServices.name_3}</h4>
                                 <p>{myDetailedNavServices.content_3}</p>
-                            </div>
+                            </div>z
 
                         </article>
 
@@ -41,8 +40,7 @@ const servicesNavDetail = () => {
                     </div>
 
                     <div className="col-md-4">
-                        <div className="sticky-top">
-
+                        <div>
                             <div className='border p-4'>
                                 {
                                     servicesData.map((item) => (

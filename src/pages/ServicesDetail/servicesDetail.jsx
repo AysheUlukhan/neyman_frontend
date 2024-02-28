@@ -32,6 +32,7 @@ const servicesDetail = () => {
                 <h4>{myDetailedServices.name_3}</h4>
                 <p>{myDetailedServices.content_3}</p>
               </div>
+            
 
             </article>
 
@@ -39,7 +40,7 @@ const servicesDetail = () => {
           </div>
 
           <div className="col-md-4 ">
-            <div className="sticky-top">
+            <div>
 
               <div className='border p-4'>
                 {
