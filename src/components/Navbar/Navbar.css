@@ -22,13 +22,24 @@ nav{
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
+nav .lang{
+    position: relative;
+}
+
 nav .nav-drop-language {
-    background-color: var(--white);
-    display: none;
+    background-color: var(--white) !important;
+    /* display: none; */
+    position: absolute;
+    padding: 0 30px;
+    margin: 10px 0 0 -30px;
 
 }
 
-nav .nav-drop-language li:hover {
+nav .nav-drop-language p{
+    cursor: pointer;
+}
+
+/* nav .nav-drop-language li:hover {
     color: var(--dark) !important;
 }
 
@@ -40,7 +51,7 @@ nav .nav-language:hover .nav-drop-language {
 
 nav .nav-drop-language li {
     padding: 0 30px 0 0 !important;
-}
+} */
 
 nav .offcanvas-body .res-nav {
     margin-left: -24px;

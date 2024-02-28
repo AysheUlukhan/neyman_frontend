@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef, useState } from 'react';
 import logo from '../../assets/images/logo/neymanlogo.png';
 import { NavLink } from 'react-router-dom';
 import './Navbar.css';
@@ -16,6 +16,18 @@ import { GrLanguage } from "react-icons/gr";
 
 
 const Navbar = () => {
+
+  const [open, setOpen] = useState(false);
+
+  // const menuRef = useRef();
+  // const langRef = useRef();
+
+  // window.addEventListener("click", (e)=>{
+  //   if(e.target !== menuRef.current && e.target !== langRef.current){
+  //     setOpen(false);
+  //   }
+  // })
+
   return (
     <nav className=' sticky-top'>
       <div className='container'>
@@ -45,7 +57,7 @@ const Navbar = () => {
                 <NavLink to='/Contact' className='nav-link fw-semibold '>Əlaqə</NavLink>
               </li>
 
-              <ul>
+              {/* <ul>
                 <li className='nav-language'><GrLanguage className='me-2 fs-20 cursor-pointer' />
                   <ul className='nav-drop-language'>
                     <li>Az</li>
@@ -53,12 +65,27 @@ const Navbar = () => {
                     <li>Tr</li>
                   </ul>
                 </li>
-              </ul>
+              </ul> */}
+              <div className='lang'>
+                <GrLanguage onClick={() => setOpen(!open)} className='me-2 fs-20 cursor-pointer nav-language' />
+                {
+                  open && (
+                    <div className='nav-drop-language'>
+                      <p onClick={() => setOpen(false)}>AZ</p>
+                      <p onClick={() => setOpen(false)}>EN</p>
+                      <p onClick={() => setOpen(false)}>TR</p>
+                    </div>
+
+                  )
+                }
+
+              </div>
+
             </ul>
           </div>
           <div>
             <div className='d-flex'>
-              <ul className='d-d-inline-block d-lg-none d-xxl-none d-xl-none'>
+              {/* <ul className='d-inline-block d-lg-none d-xxl-none d-xl-none'>
                 <li className='nav-language'><GrLanguage className='me-2 fs-20 cursor-pointer' />
                   <ul className='nav-drop-language'>
                     <li>Az</li>
@@ -66,7 +93,23 @@ const Navbar = () => {
                     <li>Tr</li>
                   </ul>
                 </li>
-              </ul>
+              </ul> */}
+
+              <div className='lang d-inline-block d-lg-none d-xxl-none d-xl-none'>
+                <GrLanguage onClick={() => setOpen(!open)} className='me-2 fs-20 cursor-pointer nav-language' />
+                {
+                  open && (
+                    <div className='nav-drop-language'>
+                      <p onClick={() => setOpen(false)}>AZ</p>
+                      <p onClick={() => setOpen(false)}>EN</p>
+                      <p onClick={() => setOpen(false)}>TR</p>
+                    </div>
+
+                  )
+                }
+
+              </div>
+
               {/* <GrLanguage className='me-2 fs-20 cursor-pointer d-d-inline-block d-lg-none d-xxl-none d-xl-none' /> */}
               <HiMenuAlt1 className='fs-30 cursor-pointer' data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" />
             </div>
