@@ -37,7 +37,7 @@ const Home = () => {
       <section className="container px-4 hero-section">
         <div className="row align-items-center justify-content-xl-between">
           <div className='col-lg-8'>
-            
+
 
             <h4 className='text-black hero-text '>
               <span>
@@ -153,15 +153,13 @@ const Home = () => {
             </div>
           </div>
           <div className='row py-5'>
-            {
+            {/* {
               blogData.slice(0, 3).map((item) => (
                 <div className='col-xl-4 col-lg-4 col-md-6 col-sm-12' key={item.id}>
                   <div className='blog-card'>
                     <div className='card-body border'>
-                      {/* <p className='card-text'>20 dekabr 2022-ci il | İNKİŞAF</p> */}
                       <span className='card-text'>{item.title} |</span> <span className='card-text'>{item.date}</span>
                       <h5 className='card-title'>{item.content}</h5>
-                      {/* <h5 className='card-title'>Siz hələ də rəqəmsal alətlərdən istifadə etmirsiniz?</h5> */}
                     </div>
                     <img src={item.image} alt='blog-img' className="d-block w-100 img-fluid" />
                     <div className='border blog-card-end'>
@@ -170,7 +168,31 @@ const Home = () => {
                   </div>
                 </div>
               ))
+            } */}
+
+            {
+              blogData.slice(0, 3).map((item) => (
+
+                <div className='col-xl-4 col-lg-4 col-md-6 col-sm-12 cards' key={item.id}>
+                  <div className="card">
+                    <div className='blogImg'>
+
+                      <img src={item.image} className="d-block mx-lg-auto img-fluid " />
+                    </div>
+                    <div className="card-body text-center">
+                      <div className='py-2 fs-14'>
+                        <span>{item.title} </span>| <span>{item.date}</span>
+                      </div>
+                      <h4 className='fs-24'>{item.content}</h4>
+                      <NavLink className="text-decoration-none" key={item.id} to={`/BlogDetail/${item.id}`}>
+                      <p className='read '>Ətraflı Oxu <span><FaArrowRight /></span></p>
+                    </NavLink>
+                    </div>
+                  </div>
+                </div>
+              ))
             }
+
 
             {/* <div className='col-xl-4 col-lg-4 col-md-6 col-12'>
               

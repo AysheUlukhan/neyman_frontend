@@ -29,7 +29,7 @@ const blogDetail = () => {
           </article>
         </div>
         <div className="col-lg-4 col-sm-12 col-12 left-related-posts">
-          <div className="sticky-top">
+          <div>
 
             <div>
               <div className='related-posts pb-3'>
