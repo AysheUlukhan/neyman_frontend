@@ -1,8 +1,7 @@
 import React, { useRef, useState } from 'react';
 import logo from '../../assets/images/logo/neymanlogo.png';
-import { NavLink } from 'react-router-dom';
+import { NavLink} from 'react-router-dom';
 import './Navbar.css';
-import { Link } from 'react-scroll'
 import { AiOutlineClose } from "react-icons/ai";
 import { HiMenuAlt1 } from 'react-icons/hi'
 import { FaMapLocationDot } from "react-icons/fa6";
@@ -14,19 +13,19 @@ import { FaInstagram } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa";
 import { GrLanguage } from "react-icons/gr";
 
-
 const Navbar = () => {
 
+  const handleServicesClick = () => {
+    const currentPagePath = window.location.pathname;
+    if (currentPagePath === '/') {
+      const servicesSection = document.getElementById('services');
+      servicesSection.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      window.location.href = '/ServicesDetail/1';
+    }
+  };
   const [open, setOpen] = useState(false);
 
-  // const menuRef = useRef();
-  // const langRef = useRef();
-
-  // window.addEventListener("click", (e)=>{
-  //   if(e.target !== menuRef.current && e.target !== langRef.current){
-  //     setOpen(false);
-  //   }
-  // })
 
   return (
     <nav className=' sticky-top'>
@@ -40,13 +39,14 @@ const Navbar = () => {
               <li>
                 <NavLink to='/About' className='nav-link fw-semibold '>Haqqımızda</NavLink>
               </li>
-              <li>
+              {/* <li>
                 <Link activeClass="active"
                   to="services"
                   spy={true}
                   smooth={true}
                   duration={700} className='fw-semibold nav-link'>Servislər</Link>
-              </li>
+              </li> */}
+              <li><NavLink className='fw-semibold nav-link' onClick={handleServicesClick}>Servisler</NavLink></li>
               <li>
                 <NavLink to='/Portfolio' className='nav-link fw-semibold '>Layihələr</NavLink>
               </li>
@@ -129,7 +129,7 @@ const Navbar = () => {
                       <NavLink to='/About' className='nav-link'>Haqqımızda</NavLink>
                     </li>
                     <li className='h-60'>
-                      <NavLink to='/Services' className='nav-link'>Services</NavLink>
+                      <NavLink onClick={handleServicesClick} className='nav-link'>Services</NavLink>
                     </li>
                     <li className='h-60'>
                       <NavLink to='/Portfolio' className='nav-link'>Layihələr</NavLink>

@@ -98,3 +98,29 @@ const Blog = () => {
 }
 
 export default Blog
+
+
+
+// fetch('https://fakestoreapi.com/products')
+//     .then((res) => res.json())
+//     .then(data => {
+//         let div = ""
+//         data.map((item) => {
+//             div += `
+//            <div class="card">
+//                <img src="${item.image}" class="card-img-top" alt="...">
+//                <div class="card-body">
+//                    <h5 class="card-title">${item.title}</h5>
+//                    <p class="card-text">${item.description}</p>
+//                </div>
+//        </div>`
+
+//         })
+//         results.innerHTML = div
+//     })
+
+
+
+// function changeCPage(id) {
+//     setCurrentPage(id);
+// }

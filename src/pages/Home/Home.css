@@ -17,13 +17,13 @@
     padding: 80px 40px;
 }
 
-/* .home .border_style {
+.home .border_style {
     border: 1px solid var(--medium-blue);
     padding: 10px;
     color: var(--medium-blue);
     border-radius: 5px;
     font-size: 18px !important;
-} */
+}
 
 .answer {
     max-height: 0;

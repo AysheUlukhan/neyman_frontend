@@ -58,7 +58,7 @@ const Home = () => {
               <span className='text'>Proqram <br /> Təminatının </span>
               Həlləri <br /> Üzərində İşləyirik
             </h4>
-            {/* <p className='fs-22 pt-5'>İdeyanı Yaz, <NavLink to='/Contact' className='text-decoration-none border_style'>Qiymət Təklifi Al</NavLink></p> */}
+            <p className='fs-22 pt-5'>İdeyanı Yaz, <NavLink to='/Contact' className='text-decoration-none border_style'>Qiymət Təklifi Al</NavLink></p>
           </div>
           {/* <div className='col-lg-4 hero-logo'>
                 <img src={hero_img} alt="" />
