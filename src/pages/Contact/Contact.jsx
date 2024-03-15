@@ -73,16 +73,16 @@ const Contact = () => {
           </div>
           <div className='d-flex sosial-icons'>
             <div className='contact-sosial-icons fa'>
-              <a href='#/'><i className="fa-brands fa-facebook-f fs-20"></i></a>
+              <a href='https://www.facebook.com/neymantech' target='_blank'><i className="fa-brands fa-facebook-f fs-20"></i></a>
             </div>
             <div className='contact-sosial-icons'>
-              <a href='#/'><i className="fa-brands fa-twitter"></i></a>
+              <a href='#/' target='_blank'><i className="fa-brands fa-twitter"></i></a>
             </div>
             <div className='contact-sosial-icons'>
-              <a href='#/'><i className="fa-brands fa-instagram fs-19"></i></a>
+              <a href='https://www.instagram.com/neymanenterprise/' target='_blank'><i className="fa-brands fa-instagram fs-19"></i></a>
             </div>
             <div className='contact-sosial-icons'>
-              <a href='#/'><i className="fa-brands fa-linkedin-in fs-19"></i></a>
+              <a href='https://www.linkedin.com/company/neyman-technologies/' target='_blank'><i className="fa-brands fa-linkedin-in fs-19"></i></a>
             </div>
           </div>
 

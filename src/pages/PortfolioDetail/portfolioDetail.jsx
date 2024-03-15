@@ -12,8 +12,8 @@ const portfolioDetail = () => {
         <div className='container portfolio_detail'>
             <div className='d-flex align-items-center py-5 portfolio_detail_head'>
                 <a href='/' className='d-flex align-items-center gap-1 '>ANA SƏHİFƏ <LuChevronRight /></a>
-                <a href='/Portfolio' className='d-flex align-items-center gap-1 '>PORTFOLIO <LuChevronRight /></a>
-                <p>PORTFOLIO DETAIL</p>
+                <a href='/Portfolio' className='d-flex align-items-center gap-1 '>LAYİHƏLƏR <LuChevronRight /></a>
+                <p>LAYİHƏ DETAIL</p>
             </div>
             <div className='row'>
                 <div className='col-md-12'>

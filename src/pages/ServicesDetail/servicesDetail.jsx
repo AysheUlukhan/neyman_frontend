@@ -14,7 +14,7 @@ const servicesDetail = () => {
           <p>SERVİSLƏR</p>
         </div>
         <div className="row g-lg-5 py-5">
-          <div className="col-md-8 ">
+          <div className="col-lg-8 col-12 col-sm-12">
 
             <article>
               <h2 className="fw-bold">{myDetailedServices.title}</h2>
@@ -39,9 +39,7 @@ const servicesDetail = () => {
 
           </div>
 
-          <div className="col-md-4 ">
-            <div>
-
+          <div className="col-lg-4 col-12 col-sm-12 servicesnav">
               <div className='border p-4'>
                 {
                   servicesData.map((item) => (
@@ -51,19 +49,6 @@ const servicesDetail = () => {
                   ))
                 }
               </div>
-
-              {/* <div className='border p-4 mt-5'>
-                <p className='text-center fs-20 fw-medium'>Sifariş et</p>
-                <form action="" className='mt-3'>
-                  <input className='w-100 border p-2' type="text" placeholder='Ad və Soyad *' />
-                  <input className='w-100 border p-2 mt-3' type="tel" placeholder='Əlaqə nömrəsi *' />
-                  <input className='w-100 border p-2 mt-3' type="email" placeholder='E-poçt *' />
-                  <textarea rows="5" className='mt-3 p-2 border w-100' placeholder='Mesaj'></textarea>
-                  <button className='border bg-transparent px-3 py-1 mt-2'>Göndər</button>
-                </form>
-              </div> */}
-
-            </div>
 
 
           </div>

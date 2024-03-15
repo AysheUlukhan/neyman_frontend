@@ -80,6 +80,14 @@ textarea {
 
 }
 
+@media (max-width:992px) {
+    .servicesDetail .servicesnav{
+        padding-top: 40px;
+    }
+
+
+}
+
 @media (max-width:1024px) {
 
     .servicesDetail .form-offer{

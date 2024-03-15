@@ -9,6 +9,19 @@ import { NavLink } from 'react-router-dom';
 import './Footer.css'
 
 const Footer = () => {
+
+  const handleServicesClick = () => {
+    const currentPagePath = window.location.pathname;
+    if (currentPagePath === '/') {
+      const servicesSection = document.getElementById('services');
+      servicesSection.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      window.location.href = '/ServicesDetail/1';
+    }
+  };
+
+  let date = new Date();
+
   return (
     <div>
       <footer>
@@ -21,10 +34,10 @@ const Footer = () => {
                 <p>Xüsusilə biznes saytları üçün nəzərdə tutulmuş Eidan mövzusu ilə şirkətinizin onlayn çiçəklənməsini təmin edin.</p>
               </div>
               <div className='fs-22 d-flex gap-30 pt-20 text-black '>
-                <FaTwitter className='footer-icon' />
-                <FaFacebookF className='footer-icon' />
-                <FaLinkedinIn className='footer-icon' />
-                <FaInstagram className='footer-icon' />
+                <a href="" className='footer-icon' target='_blank'><FaTwitter/></a>
+                <a href="https://www.facebook.com/neymantech" className='footer-icon' target='_blank'><FaFacebookF/></a>
+                <a href="https://www.linkedin.com/company/neyman-technologies/" className='footer-icon' target='_blank'><FaLinkedinIn/></a>
+                <a href="https://www.instagram.com/neymanenterprise/" className='footer-icon' target='_blank'><FaInstagram/></a>
               </div>
             </div>
             <div className='col-lg-3 col-sm-6 mt-3'>
@@ -32,7 +45,7 @@ const Footer = () => {
                 <h5 className='mb-3'>Faydalı Linklər</h5>
                 <p className='mb-2'><NavLink to='/'>Ana Səhifə</NavLink></p>
                 <p className='mb-2'><NavLink to='/About'>Haqqımızda</NavLink></p>
-                <p className='mb-2'><NavLink to='/Services'>Servislər</NavLink></p>
+                <p className='mb-2'><NavLink onClick={handleServicesClick}>Servislər</NavLink></p>
                 <p className='mb-2'><NavLink to='/Portfolio'>Layihələrimiz</NavLink></p>
                 <p className='mb-2'><NavLink to='/Blog'>Bloq</NavLink></p>
                 <p className='mb-2'><NavLink to='/Contact'>Əlaqə</NavLink></p>
@@ -65,7 +78,7 @@ const Footer = () => {
         <div className='py-2 footer-end'>
           <div className='container'>
             <div>
-              <p>COPYRIGHT © 2024 by NET LLC</p>
+              <p>COPYRIGHT © {date.getFullYear()} by NET LLC</p>
             </div>
           </div>
         </div>

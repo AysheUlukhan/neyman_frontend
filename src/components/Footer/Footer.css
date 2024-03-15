@@ -3,6 +3,7 @@ footer img{
 }
 
 footer .footer-icon{
+    color: var(--dark);
     transition: all .5s;
     cursor: pointer;
 }

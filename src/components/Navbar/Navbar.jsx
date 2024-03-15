@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react';
 import logo from '../../assets/images/logo/neymanlogo.png';
-import { NavLink} from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import './Navbar.css';
 import { AiOutlineClose } from "react-icons/ai";
 import { HiMenuAlt1 } from 'react-icons/hi'
@@ -24,6 +24,7 @@ const Navbar = () => {
       window.location.href = '/ServicesDetail/1';
     }
   };
+
   const [open, setOpen] = useState(false);
 
 
@@ -39,13 +40,6 @@ const Navbar = () => {
               <li>
                 <NavLink to='/About' className='nav-link fw-semibold '>Haqqımızda</NavLink>
               </li>
-              {/* <li>
-                <Link activeClass="active"
-                  to="services"
-                  spy={true}
-                  smooth={true}
-                  duration={700} className='fw-semibold nav-link'>Servislər</Link>
-              </li> */}
               <li><NavLink className='fw-semibold nav-link' onClick={handleServicesClick}>Servisler</NavLink></li>
               <li>
                 <NavLink to='/Portfolio' className='nav-link fw-semibold '>Layihələr</NavLink>
@@ -78,6 +72,7 @@ const Navbar = () => {
 
                   )
                 }
+                
 
               </div>
 
@@ -165,16 +160,16 @@ const Navbar = () => {
 
                   <div className='d-flex justify-content-between gap-sm-3 gap-xs-3 pt-50'>
                     <div className='border border-black rounded-pill p-15 p-sm-10 p-xs-10'>
-                      <a href='#/'><FaFacebookF className='fs-22 text-black' /></a>
+                      <a href='https://www.facebook.com/neymantech' target='_blank'><FaFacebookF className='fs-22 text-black' /></a>
                     </div>
                     <div className='border border-black rounded-pill p-15 p-sm-10 p-xs-10'>
-                      <a href='#/'><FaTwitter className='fs-22 text-black' /></a>
+                      <a href='#/' target='_blank'><FaTwitter className='fs-22 text-black' /></a>
                     </div>
                     <div className='border border-black rounded-pill p-15 p-sm-10 p-xs-10'>
-                      <a href='#/'><FaInstagram className='fs-22 text-black' /></a>
+                      <a href='https://www.instagram.com/neymanenterprise/' target='_blank'><FaInstagram className='fs-22 text-black' /></a>
                     </div>
                     <div className='border border-black rounded-pill p-15 p-sm-10 p-xs-10'>
-                      <a href='#/'><FaLinkedinIn className='fs-22 text-black' /></a>
+                      <a href='https://www.linkedin.com/company/neyman-technologies/' target='_blank'><FaLinkedinIn className='fs-22 text-black' /></a>
                     </div>
                   </div>
                 </div>
