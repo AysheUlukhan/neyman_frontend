@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './Home.css';
 import { accordionData } from '../../components/Api/AccordionData/accordionData';
 import { FaPlus } from "react-icons/fa6";
@@ -9,6 +9,8 @@ import CommentSlider from '../../components/Commentcarousel/commentC';
 import { servicesData } from '../../components/Api/ServicesData/servicesData';
 import { NavLink } from 'react-router-dom';
 import { blogData } from '../../components/Api/BlogData/blogData';
+import axios from 'axios';
+
 
 import { TypeAnimation } from 'react-type-animation';
 // import { NavLink } from 'react-router-dom';
@@ -32,6 +34,7 @@ const Home = () => {
 
     setSelected(i)
   }
+
   return (
     <div className='home'>
       <section className="container px-4 hero-section">

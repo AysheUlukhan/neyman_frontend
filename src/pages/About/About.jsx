@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { LuChevronRight } from "react-icons/lu";
 import './About.css'
 import PartnerSlider from '../../components/PartnersSlider/partnerSlider';
@@ -6,8 +6,23 @@ import workflow_img from '../../assets/images/svg/workflow.svg'
 import agile_img from '../../assets/images/svg/agile.svg'
 import learn_img from '../../assets/images/svg/learn.svg'
 import CommentSlider from '../../components/Commentcarousel/commentC';
+import axios from 'axios';
 
 const About = () => {
+  const [userData, setUserData] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const res = await axios.get('http://167.99.138.59/en/different_us/');
+        setUserData(res.data)
+      } catch (err) {
+        console.log(err);
+      }
+    }
+    fetchData();
+  })
+
   return (
     <div className='about'>
       <div className='container'>
@@ -15,25 +30,20 @@ const About = () => {
           <a href='/' className='d-flex align-items-center gap-1'>ANA SƏHİFƏ <LuChevronRight /></a>
           <p>HAQQIMIZDA</p>
         </div>
-        {/* <div className="row g-lg-5 row-gap-5 py-3 mt-3 about-content">
-          <div className="col-lg-6 col-md-12 col-sm-12 col-12">
-            <h1 className="fw-bold lh-1 mb-4">Bizi tanıyın</h1>
-            <p className="mb-3">2015-ci ildən bu günə qədər veb xidmətləri göstərən agentliyik. Təsis edildiyimiz gündən bu günə qədər uzunmüddətli investisiyalara, qısa müddət ərzində qazanc əldə etməyə üstünlük verdik. Ən böyük qazancımız, işimizə duyduğumuz hörmət hissi və vurğunluqdur…</p>
-            <p>Və eyni hissləri bölüşən böyük ailəyə çevrildik. Hər il qazandığımız uğurlar bizi ruhlandırır və həvəsimizi daha da artırır. Ancaq ən böyük mükafat sizin tərif dolu sözləriniz və razılığınızdır.</p>
-          </div>
-          <div className="col-12 col-sm-12 col-md-12 col-lg-6">
-            <img src="https://webline.az/wp-content/uploads/2023/06/about-us.webp" className="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" />
-          </div>
-        </div> */}
-
-
-
         <div className='row py-5 worth-section'>
-          <div className='col-lg-6 col-md-12 col-sm-12 col-12'>
-            <h4 className="fw-bolder fs-27 mb-4">Bizi tanıyın</h4>
-            <p className="mb-3">2015-ci ildən bu günə qədər veb xidmətləri göstərən agentliyik. Təsis edildiyimiz gündən bu günə qədər uzunmüddətli investisiyalara, qısa müddət ərzində qazanc əldə etməyə üstünlük verdik. Ən böyük qazancımız, işimizə duyduğumuz hörmət hissi və vurğunluqdur…</p>
-            <p>Və eyni hissləri bölüşən böyük ailəyə çevrildik. Hər il qazandığımız uğurlar bizi ruhlandırır və həvəsimizi daha da artırır. Ancaq ən böyük mükafat sizin tərif dolu sözləriniz və razılığınızdır.</p>
-          </div>
+
+          {
+            userData.map((item) => {
+              <div className='col-lg-6 col-md-12 col-sm-12 col-12'>
+                <h4 className="fw-bolder fs-27 mb-4">{item.Title}</h4>
+                <p className="mb-3">2015-ci ildən bu günə qədər veb xidmətləri göstərən agentliyik. Təsis edildiyimiz gündən bu günə qədər uzunmüddətli investisiyalara, qısa müddət ərzində qazanc əldə etməyə üstünlük verdik. Ən böyük qazancımız, işimizə duyduğumuz hörmət hissi və vurğunluqdur…</p>
+                <p>Və eyni hissləri bölüşən böyük ailəyə çevrildik. Hər il qazandığımız uğurlar bizi ruhlandırır və həvəsimizi daha da artırır. Ancaq ən böyük mükafat sizin tərif dolu sözləriniz və razılığınızdır.</p>
+              </div>
+            })
+          }
+
+
+
           <div className='col-lg-6 col-md-12 col-sm-12 col-12 mt-2'>
             <h4 className='fs-27 fw-bolder pb-5'>Dəyərlərimiz</h4>
             <div className='d-flex align-items-center gap-40'>
