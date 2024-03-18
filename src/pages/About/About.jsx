@@ -21,7 +21,7 @@ const About = () => {
       }
     }
     fetchData();
-  })
+  },[axios]);
 
   return (
     <div className='about'>
