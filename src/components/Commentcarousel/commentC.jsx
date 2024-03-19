@@ -1,13 +1,29 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/free-mode';
-import { commentData } from '../Api/CommentData/commentData'
+// import { commentData } from '../Api/CommentData/commentData'
 import SwiperButton from './SwiperNavButton/SwiperButton';
 import './commentC.css'
 import { BiSolidQuoteLeft } from "react-icons/bi";
+import axios from 'axios';
+import { BASE_URL } from '../../httpRequest/httpRequest'
 
 const commentC = () => {
+    const [userData, setUserData] = useState([]);
+
+    useEffect(() => {
+      const fetchData = async () => {
+        try {
+          const res = await axios.get(`${BASE_URL}en/costumer_reviews/`);
+          setUserData(res.data)
+        } catch (err) {
+          console.log(err);
+        }
+      }
+      fetchData();
+    }, [])
+
     return (
         <div className='container testimonials'>
             <div className='testimonials-head'>
@@ -48,7 +64,7 @@ const commentC = () => {
                 {/* <SwiperButton/> */}
 
                 {
-                    commentData.map((item) => (
+                    userData.map((item) => (
                             <SwiperSlide key={item.id}>
                                     <div className='col-xl-12 comment-card'>
                                         <div className='d-flex align-items-center gap-3'>
@@ -57,15 +73,15 @@ const commentC = () => {
                                             {/* <h5>{item.title}</h5> */}
                                         </div>
                                         <div className='pt-20 comment-text'>
-                                            <p>{item.comment}</p>
+                                            <p>{item.costumer_review}</p>
                                         </div>
                                         <div className='d-flex align-items-center gap-3 comment-card-end'>
                                             <div>
                                                 <img src={item.image} alt='img' />
                                             </div>
                                             <div>
-                                                <h5 className='font-medium leading-normal'>{item.name}</h5>
-                                                <p className=''>{item.position}</p>
+                                                <h5 className='font-medium leading-normal'>{item.fullname}</h5>
+                                                <p className=''>{item.costumer_company}</p>
                                             </div>
                                         </div>
                                     </div>

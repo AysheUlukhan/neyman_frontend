@@ -7,6 +7,7 @@ import agile_img from '../../assets/images/svg/agile.svg'
 import learn_img from '../../assets/images/svg/learn.svg'
 import CommentSlider from '../../components/Commentcarousel/commentC';
 import axios from 'axios';
+import { BASE_URL } from '../../httpRequest/httpRequest'
 
 const About = () => {
   const [userData, setUserData] = useState([]);
@@ -14,14 +15,14 @@ const About = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await axios.get('http://167.99.138.59/en/different_us/');
+        const res = await axios.get(`${BASE_URL}en/different_us/`);
         setUserData(res.data)
       } catch (err) {
         console.log(err);
       }
     }
     fetchData();
-  })
+  }, [])
 
   return (
     <div className='about'>
@@ -31,18 +32,17 @@ const About = () => {
           <p>HAQQIMIZDA</p>
         </div>
         <div className='row py-5 worth-section'>
+          <div className='col-lg-6'>
+            {
+              userData.map(item => (
 
-          {
-            userData.map((item) => {
-              <div className='col-lg-6 col-md-12 col-sm-12 col-12'>
-                <h4 className="fw-bolder fs-27 mb-4">{item.Title}</h4>
-                <p className="mb-3">2015-ci ildən bu günə qədər veb xidmətləri göstərən agentliyik. Təsis edildiyimiz gündən bu günə qədər uzunmüddətli investisiyalara, qısa müddət ərzində qazanc əldə etməyə üstünlük verdik. Ən böyük qazancımız, işimizə duyduğumuz hörmət hissi və vurğunluqdur…</p>
-                <p>Və eyni hissləri bölüşən böyük ailəyə çevrildik. Hər il qazandığımız uğurlar bizi ruhlandırır və həvəsimizi daha da artırır. Ancaq ən böyük mükafat sizin tərif dolu sözləriniz və razılığınızdır.</p>
-              </div>
-            })
-          }
-
-
+                <div className='col-lg-12 col-md-12 col-sm-12 col-12'>
+                  <h4 className="fw-bolder fs-27 mb-4">{item.title}</h4>
+                  <p className="mb-3">{item.content}</p>
+                </div>
+              ))
+            }
+          </div>
 
           <div className='col-lg-6 col-md-12 col-sm-12 col-12 mt-2'>
             <h4 className='fs-27 fw-bolder pb-5'>Dəyərlərimiz</h4>

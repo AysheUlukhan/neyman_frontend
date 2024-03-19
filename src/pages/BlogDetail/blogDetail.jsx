@@ -1,14 +1,30 @@
-import React from 'react';
-import { blogData } from '../../components/Api/BlogData/blogData';
+import React, { useState, useEffect } from 'react'
+// import { blogData } from '../../components/Api/BlogData/blogData';
 import { NavLink, useParams } from 'react-router-dom';
 import { LuChevronRight } from "react-icons/lu";
 import './blogDetail.css'
+import axios from 'axios';
+import { BASE_URL } from '../../httpRequest/httpRequest'
+
 
 const blogDetail = () => {
-  const { id } = useParams();
-  let myDetailedBlog = blogData.find((item) => item.id === id)
+  const [userData, setUserData] = useState([]);
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const res = await axios.get(`${BASE_URL}en/blog/`);
+        setUserData(res.data)
+      } catch (err) {
+        console.log(err);
+      }
+    }
+    fetchData();
+  }, [])
 
-  const filteredCategory = blogData.filter((item) => {
+  const { id } = useParams();
+  let myDetailedBlog = userData.find((item) => item.id === id)
+
+  const filteredCategory = userData.filter((item) => {
     return myDetailedBlog.title === item.title
   })
 
@@ -22,10 +38,10 @@ const blogDetail = () => {
       <div className="row g-lg-5 py-5">
         <div className="col-lg-8 col-sm-12 col-12">
           <article className="blog-post">
-            <img src={myDetailedBlog.image} className='w-100 h-25 d-block mx-lg-auto img-fluid dblog-img' alt="detailblog" />
-            <div className='py-3'><span>{myDetailedBlog.title}</span> | <span>{myDetailedBlog.date}</span></div>
+            {/* <img src={myDetailedBlog.image} className='w-100 h-25 d-block mx-lg-auto img-fluid dblog-img' alt="detailblog" /> */}
+            {/* <div className='py-3'><span>{myDetailedBlog.title}</span> | <span>{myDetailedBlog.show_date}</span></div> */}
             <h3>{myDetailedBlog.content}</h3>
-            <p className='pt-3'>{myDetailedBlog.text}</p>
+            {/* <p className='pt-3'>{myDetailedBlog.text}</p> */}
           </article>
         </div>
         <div className="col-lg-4 col-sm-12 col-12 left-related-posts">

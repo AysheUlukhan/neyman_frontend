@@ -1,19 +1,31 @@
-import React, { useState } from 'react';
-import { faqData } from '../../components/Api/FaqAccordionData/faqData';
+import React, { useState, useEffect } from 'react';
+// import { faqData } from '../../components/Api/FaqAccordionData/faqData';
 import { FiArrowUpRight } from "react-icons/fi";
 import { FiArrowDownRight } from "react-icons/fi";
-
+import axios from 'axios';
 import './Faq.css'
+import {BASE_URL} from '../../httpRequest/httpRequest'
 
 const Faq = () => {
     const [selected, setSelected] = useState(null);
-    const toogle = i => {
-        if (selected === i) {
-            return setSelected(null)
-        }
+    const toggle = (index) => {
+        setSelected(selected === index ? null : index);
+    };
 
-        setSelected(i)
-    }
+    const [userData, setUserData] = useState([]);
+
+    useEffect(() => {
+      const fetchData = async () => {
+        try {
+          const res = await axios.get(`${BASE_URL}en/faq`);
+          setUserData(res.data)
+        } catch (err) {
+          console.log(err);
+        }
+      }
+      fetchData();
+    },[])
+
     return (
         <div className='container faq'>
             <div className='py-5 faq-head'>
@@ -21,9 +33,27 @@ const Faq = () => {
             </div>
             <div className='wrapper'>
                 <div className='accordion'>
-                    {faqData.map((item, i) => (
+                        {userData.map(item => (
+                           <div className='item border p-2 mb-2' key={item.id}>
+                           <div className='title d-flex justify-content-between align-items-center gap-2 pb-2 cursor-pointer' onClick={() => toggle(item)}>
+                               <div>
+                                   <p className=' fw-medium'>{item.id}</p>
+                                   <h4 className='pt-2'>{item.faq}</h4>
+                               </div>
+
+                               <span>{selected === item ? <FiArrowUpRight className='fs-22' /> : <FiArrowDownRight className='fs-22' />}</span>
+                           </div>
+                           <div className={selected === item ? 'answer show' : 'answer'}>
+                               <p className='fs-18 '>{item.answer}</p>
+                           </div>
+                       </div>
+                        ))}
+
+
+
+                    {/* {faqData.map((item, i) => (
                         <div className='item border p-2 mb-2' key={item.id}>
-                            <div className='title d-flex justify-content-between align-items-center gap-2 pb-2 cursor-pointer' onClick={() => toogle(i)}>
+                            <div className='title d-flex justify-content-between align-items-center gap-2 pb-2 cursor-pointer' onClick={() => toggle(i)}>
                                 <div>
                                     <p className=' fw-medium'>{item.number}</p>
                                     <h4 className='pt-2'>{item.title}</h4>
@@ -35,7 +65,7 @@ const Faq = () => {
                                 <p className='fs-18 '>{item.answer}</p>
                             </div>
                         </div>
-                    ))}
+                    ))} */}
                 </div>
             </div>
         </div>

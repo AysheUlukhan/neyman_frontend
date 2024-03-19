@@ -1,19 +1,22 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { LuChevronRight } from "react-icons/lu";
-import { blogData } from '../../components/Api/BlogData/blogData';
+// import { blogData } from '../../components/Api/BlogData/blogData';
 import { FaArrowLeft } from "react-icons/fa6";
 import { FaArrowRight } from "react-icons/fa6";
 import './Blog.css'
 import { NavLink } from 'react-router-dom';
-
+import axios from 'axios';
+import { BASE_URL } from '../../httpRequest/httpRequest'
 const Blog = () => {
 
   const [currentPage, setCurrentPage] = useState(1);
+  const [userData, setUserData] = useState([]);
+
   const recordsPerPage = 9;
   const lastIndex = currentPage * recordsPerPage;
   const firstIndex = lastIndex - recordsPerPage;
-  const records = blogData.slice(firstIndex, lastIndex);
-  const npage = Math.ceil(blogData.length / recordsPerPage);
+  const records = userData.slice(firstIndex, lastIndex);
+  const npage = Math.ceil(userData.length / recordsPerPage);
   const numbers = [...Array(npage + 1).keys()].slice(1);
 
 
@@ -32,6 +35,22 @@ const Blog = () => {
       setCurrentPage(currentPage + 1)
     }
   }
+
+  
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const res = await axios.get(`${BASE_URL}en/blog`);
+        setUserData(res.data)
+      } catch (err) {
+        console.log(err);
+      }
+    }
+    fetchData();
+  }, [])
+
+
 
   const [search, setSearch] = useState('');
 
@@ -60,13 +79,13 @@ const Blog = () => {
                 <div className="card">
                   <div className='blogImg'>
 
-                    <img src={post.image} className="d-block mx-lg-auto img-fluid " />
+                    <img src={post.compress_blog_image} className="d-block mx-lg-auto img-fluid " />
                   </div>
                   <div className="card-body text-center">
                     <div className='py-2 fs-14'>
-                      <span>{post.title} </span>| <span>{post.date}</span>
+                      <span>{post.title} </span>| <span>{post.show_date}</span>
                     </div>
-                    <h4 className='fs-24'>{post.content}</h4>
+                    <h4 className='fs-24'>{post.title}</h4>
                     <NavLink key={post.id} to={`/BlogDetail/${post.id}`}>
                       <p className='read '>Ətraflı Oxu <span><FaArrowRight /></span></p>
                     </NavLink>
