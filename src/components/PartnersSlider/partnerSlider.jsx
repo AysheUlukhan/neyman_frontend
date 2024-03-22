@@ -1,11 +1,24 @@
-import React from 'react'
-import { partners } from '../Api/Partners/partners'
+import React, { useEffect, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/free-mode';
 import './partner.css'
+import axios from 'axios';
+import { BASE_URL } from '../../httpRequest/httpRequest';
 
 const partnerSlider = () => {
+    const [partnerData, setPartnerData] = useState([]);
+    useEffect(() => {
+        const fetchData = async () => {
+          try {
+            const res = await axios.get(`${BASE_URL}en/partner`);
+            setPartnerData(res.data);
+          } catch (err) {
+            console.log(err);
+          }
+        };
+        fetchData();
+      }, []);
     return (
         <div className='container partners'>
             <Swiper
@@ -36,10 +49,10 @@ const partnerSlider = () => {
             >
                 
                 {
-                    partners.map((item) => (
+                    partnerData.map((item) => (
                         <SwiperSlide key={item.id}>
                             <div className='partner-img'>
-                                <img src={item.img} alt="partner" />
+                                <img src={item.original_partner_logo} alt="partner" />
                             </div>
                         </SwiperSlide>
                     ))

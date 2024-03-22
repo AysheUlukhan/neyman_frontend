@@ -4,47 +4,40 @@ import { NavLink, useParams } from 'react-router-dom'
 import { LuChevronRight } from "react-icons/lu";
 import axios from 'axios';
 import { BASE_URL } from '../../httpRequest/httpRequest'
-
 import './servicesDetail.css';
-const servicesDetail = () => {
 
-
-  // const [userData, setUserData] = useState([]);
-
-  // useEffect(() => {
-  //   const fetchData = async () => {
-  //     try {
-  //       const res = await axios.get(`${BASE_URL}en/services`);
-  //       setUserData(res.data)
-  //     } catch (err) {
-  //       console.log(err);
-  //     }
-  //   }
-  //   fetchData();
-  // }, [])
-
-  // const { id } = useParams();
-  // let myDetailedServices = userData.find((item) => item.id === id)
+const servicesNavDetail = () => {
 
 
   const [serviceDetail, setServiceDetail] = useState([]);
-  const { id } = useParams();
-  // let myDetailedServices = serviceDetail.find((item) => item.id === id)
+  const { service_slug } = useParams();
+
+  const [dataServiceDetail, setDataServiceDetail] = useState([])
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await axios.get(`${BASE_URL}en/services/`);
+        const res = await axios.get(`${BASE_URL}en/services`);
         setServiceDetail(res.data);
       } catch (err) {
         console.log(err);
       }
     };
     fetchData();
-  }, [id]);
+  }, []);
 
+  useEffect(() => {
+    const fetchServicesData = async () => {
+      try {
+        const res = await axios.get(`${BASE_URL}en/services/${service_slug}`);
+        setDataServiceDetail(res.data);
+      } catch (err) {
+        console.log(err);
+      }
+    };
+    fetchServicesData();
+  }, [service_slug]);
 
-  
 
   const [cardDetail, setCardDetail] = useState([])
 
@@ -59,11 +52,8 @@ const servicesDetail = () => {
     };
     fetchCardData();
   }, [])
-
-
-
-  return (
-    <div className='servicesDetail'>
+    return (
+      <div className='servicesDetail'>
       <div className='container '>
         <div className='d-flex align-items-center py-5 servicesDetail-head'>
           <a href='/' className='d-flex align-items-center gap-1 text-decoration-none'>ANA SƏHİFƏ <LuChevronRight /></a>
@@ -73,14 +63,16 @@ const servicesDetail = () => {
           <div className="col-lg-8 col-12 col-sm-12">
 
             <article>
-              <h2 className="fw-bold">{serviceDetail.service_title}</h2>
-              <p className='pt-3'>{serviceDetail.description}</p>
-              {cardDetail.map((item, index) => (
-                <div key={index} className='mb-4 services-post'>
-                  <h4>{item.service_card_title}</h4>
-                  <p>{item.service_card_content}</p>
-                </div>
-              ))}
+              <h2 className="fw-bold">{dataServiceDetail.service_title}</h2>
+              <p className='pt-3'>{dataServiceDetail.description}</p>
+              <div className='pt-5'>
+                {cardDetail.map((item, index) => (
+                  <div key={index} className='mb-4 services-post'>
+                    <h4>{item.service_card_title}</h4>
+                    <p>{item.service_card_content}</p>
+                  </div>
+                ))}
+              </div>
 
 
 
@@ -93,8 +85,8 @@ const servicesDetail = () => {
 
 
             <div className='border p-4'>
-            {serviceDetail.map((item, index) => (
-                <NavLink key={index} className='text-decoration-none fs-22' to={`/ServicesNavDetail/${item.id}`}>
+              {serviceDetail.map((item, index) => (
+                <NavLink key={index} className='text-decoration-none fs-22' to={`/ServicesNavDetail/${item.service_slug}`}>
                   <li className='border-bottom py-4'>{item.service_title}</li>
                 </NavLink>
               ))}
@@ -136,10 +128,7 @@ const servicesDetail = () => {
         </div>
       </div>
     </div>
-  )
+    )
 }
 
-export default servicesDetail
-
-
-
+export default servicesNavDetail

@@ -26,11 +26,11 @@ function App() {
         <Route path="/Portfolio" element={<Portfolio/>}/>
         <Route path="/Blog" element={<Blog/>}/>
         <Route path="/Contact" element={<Contact/>}/>
-        <Route path="BlogDetail/:id" element={<BlogDetail/>}/>
+        <Route path="/BlogDetail/:slug" element={<BlogDetail/>}/>
         <Route path="Faq" element={<Faq/>}/>
-        <Route path="/ServicesDetail/:id" element={<ServicesDetail/>}/>
-        <Route path="/ServicesNavDetail/:id" element={<ServicesNavDetail/>}/>
-        <Route path="/PortfolioDetail/:id" element={<PortfolioDetail/>}/>
+        <Route path="/ServicesDetail/:service_slug" element={<ServicesDetail />} />
+        <Route path="/ServicesNavDetail/:service_slug" element={<ServicesNavDetail/>}/>
+        <Route path="/PortfolioDetail/:project_slug" element={<PortfolioDetail/>}/>
       </Routes>
       <Footer/>
     </div>

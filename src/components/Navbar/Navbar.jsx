@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import logo from '../../assets/images/logo/neymanlogo.png';
 import { NavLink } from 'react-router-dom';
 import './Navbar.css';
@@ -12,6 +12,8 @@ import { FaTwitter } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa";
 import { GrLanguage } from "react-icons/gr";
+import axios from 'axios';
+import { BASE_URL } from '../../httpRequest/httpRequest'
 
 const Navbar = () => {
 
@@ -21,13 +23,24 @@ const Navbar = () => {
       const servicesSection = document.getElementById('services');
       servicesSection.scrollIntoView({ behavior: 'smooth' });
     } else {
-      window.location.href = '/ServicesDetail/1';
+      window.location.href = '/ServicesDetail/veb-sayt-jud5';
     }
   };
 
   const [open, setOpen] = useState(false);
+  const [infoData, setInfoData] = useState([]);
 
-
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const res = await axios.get(`${BASE_URL}en/contact_info`);
+        setInfoData(res.data);
+      } catch (err) {
+        console.log(err);
+      }
+    };
+    fetchData();
+  }, []);
   return (
     <nav className=' sticky-top'>
       <div className='container'>
@@ -51,15 +64,6 @@ const Navbar = () => {
                 <NavLink to='/Contact' className='nav-link fw-semibold '>Əlaqə</NavLink>
               </li>
 
-              {/* <ul>
-                <li className='nav-language'><GrLanguage className='me-2 fs-20 cursor-pointer' />
-                  <ul className='nav-drop-language'>
-                    <li>Az</li>
-                    <li>En</li>
-                    <li>Tr</li>
-                  </ul>
-                </li>
-              </ul> */}
               <div className='lang'>
                 <GrLanguage onClick={() => setOpen(!open)} className='me-2 fs-20 cursor-pointer nav-language' />
                 {
@@ -68,11 +72,12 @@ const Navbar = () => {
                       <p onClick={() => setOpen(false)}>AZ</p>
                       <p onClick={() => setOpen(false)}>EN</p>
                       <p onClick={() => setOpen(false)}>TR</p>
+                      <p onClick={() => setOpen(false)}>RU</p>
                     </div>
 
                   )
                 }
-                
+
 
               </div>
 
@@ -143,7 +148,9 @@ const Navbar = () => {
                     <div className='border border-black rounded-pill p-15 p-sm-10 p-xs-10'>
                       <FaMapLocationDot className='fs-30' />
                     </div>
-                    <p className='fs-18'>Yalova , Termal yolu Akköy.</p>
+                    
+                      <p className='fs-18'>{infoData.location_name}</p>
+                    
                   </div>
                   <div className='d-flex align-items-center gap-16 pt-20'>
                     <div className='border border-black rounded-pill p-15 p-sm-10 p-xs-10'>

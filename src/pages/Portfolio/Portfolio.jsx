@@ -1,26 +1,58 @@
-import React, { useEffect, useState } from 'react'
+
+
+
+import React, { useEffect, useState } from 'react';
 import { LuChevronRight } from "react-icons/lu";
 import './Portfolio.css';
-// import { portfolioData } from '../../components/Api/PortfolioData/portfolioData';
-import { servicesData } from '../../components/Api/ServicesData/servicesData';
 import { NavLink } from 'react-router-dom';
+import axios from 'axios';
+import { BASE_URL } from '../../httpRequest/httpRequest';
 
 const Portfolio = () => {
-  const [data, setData] = useState([]);
+  const [portfolioData, setPortfolioData] = useState([]);
   const [collection, setCollection] = useState([]);
+  const [filteredData, setFilteredData] = useState([]);
 
   useEffect(() => {
-    setData(servicesData);
-    setCollection([...new Set(servicesData.map((item) => item.title))])
-  }, [])
+    const fetchData = async () => {
+      try {
+        const projectRes = await axios.get(`${BASE_URL}en/projects`);
+        setPortfolioData(projectRes.data);
 
-  const gallery_filter = (itemData) => {
-    const filterData = servicesData.filter((item) => item.title === itemData);
-    setData(filterData);
-  }
+        const serviceRes = await axios.get(`${BASE_URL}en/services`);
+        setCollection(serviceRes.data);
+        
+        setFilteredData(projectRes.data);
+      } catch (err) {
+        console.log(err);
+      }
+    };
+
+    fetchData();
+  }, []);
+
+  // Xidmətə görə məlumatları filterləmə funksiyası
+  const handleFilter = (serviceTitle) => {
+    try {
+      let filteredProjects = [];
+  
+      if (serviceTitle === "Hamısı") {
+        filteredProjects = portfolioData;
+      } else {
+        filteredProjects = portfolioData.filter(item =>
+          item.service_title === serviceTitle
+        );
+      }
+  
+      setFilteredData(filteredProjects);
+    } catch (error) {
+      console.error("Filtr məlumatlar alınarkən səhv baş verdi:", error);
+    }
+  };
+  
   return (
     <div className='portfolio'>
-      <div className='container '>
+      <div className='container'>
         <div className='d-flex align-items-center py-5 portfolio-head'>
           <a href='/' className='d-flex align-items-center gap-1'>ANA SƏHİFƏ <LuChevronRight /></a>
           <p>LAYİHƏLƏR</p>
@@ -31,61 +63,38 @@ const Portfolio = () => {
             <h3 className='fs-36 fw-bolder'>Ən Son Layihələr</h3>
           </div>
           <div>
-            {/* <ul className='d-flex column-gap-3'>
-              <li><button onClick={() => setData(portfolioData)}>HAMISI</button></li>
-              {
-                collection.map((item) => <li><button onClick={() => { gallery_filter(item) }}>{item}</button></li>)
-              }
-            </ul> */}
             <div className="dropdown">
               <button type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Sırala <i class="fa-solid fa-angle-down fs-18"></i>
+                Sırala <i className="fa-solid fa-angle-down fs-18"></i>
               </button>
               <ul className="dropdown-menu">
-                <li><a className="dropdown-item" href="#/" onClick={() => setData(servicesData)}>Hamısı</a></li>
-                {
-                  collection.map((item) => <li><a className="dropdown-item" href="#/" onClick={() => { gallery_filter(item) }}>{item}</a></li>)
-                }
+                <li><a className="dropdown-item" href="#/" onClick={() => handleFilter("Hamısı")}>Hamısı</a></li>
+                {collection.map((item) => (
+                  <li key={item.id}><a className="dropdown-item" href="#/" onClick={() => handleFilter(item.service_title)}>{item.service_title}</a></li>
+                ))}
               </ul>
-              {/* <ul>
-                <li className='drop'>
-                  <a href="#/" className='text-decoration-none drop-sort'>Sırala</a>
-                  <ul className='dropdown-menus'>
-                    <li><a href="#/" className='text-decoration-none' onClick={() => setData(servicesData)}>Hamısı</a></li>
-                    {
-                      collection.map((item) => <li><a href="#/" className='text-decoration-none' onClick={() => { gallery_filter(item) }}>{item}</a></li>)
-                    }
-                  </ul>
-                </li>
-              </ul> */}
             </div>
           </div>
         </div>
         <div className='row row-gap-4'>
-          {
-            data.map((item) => (
-              <div className='col-xl-6 col-md-6 col-sm-12' key={item.id}>
-                <div className='wrapper'>
-                  <div className='image'>
-                    <img src={item.image} className="d-block mx-lg-auto img-fluid portfolioImg" />
-                    <div className='content'>
-                      {/* <p className='fs-24'>{item.content}</p> */}
-                      <a href="#/">Veb Sayta Keçid <i className="fa-solid fa-eye"></i></a>
-                      <NavLink to={`/PortfolioDetail/${item.id}`} href="#/">Yaxından Bax <i className="fa-solid fa-eye"></i></NavLink>
+          {filteredData && filteredData.map((item) => (
+            <div className='col-xl-6 col-md-6 col-sm-12' key={item.id}>
+              <div className='wrapper'>
+                <div className='image'>
+                  <img src={item.project_original_image} className="d-block mx-lg-auto img-fluid portfolioImg" alt={item.project_title} />
+                  <div className='content d-flex flex-column'>
+                    <div className='d-flex gap-2'>
+                      <a href={item.project_link} target='_blank' rel="noreferrer">Veb Sayta Keçid <i className="fa-solid fa-eye"></i></a>
+                      <NavLink to={`/PortfolioDetail/${item.project_slug}`} href="#/">Yaxından Bax <i className="fa-solid fa-eye"></i></NavLink>
                     </div>
                   </div>
                 </div>
-                  {/* <div className='py-2'>
-                    <p className='fs-18'>{item.title}</p>
-                  </div> */}
               </div>
-
-            ))
-          }
-
-          <div className='col-xl-6 col-12'>
-
-          </div>
+              <div className='py-2'>
+                <p className='fs-18'>{item.project_title}</p>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
       <div className='mt-5 form-offer'>
@@ -119,7 +128,10 @@ const Portfolio = () => {
         </div>
       </div>
     </div>
-  )
+  );
 }
 
-export default Portfolio
+export default Portfolio;
+
+
+

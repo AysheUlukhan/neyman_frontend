@@ -34,8 +34,8 @@ const servicesCard = () => {
                   <CgWebsite className='fs-30 ' />
                 </div>
                 <p className="card-title mb-0 fw-semibold fs-20">{item.service_title}</p>
-                <p className="card-text mb-0 py-3 fs-14">{item.description}</p>
-                <NavLink to={`/ServicesDetail/${item.id}`} className='text-decoration-none fw-medium card-view d-flex align-items-center gap-2'>View Details <FaArrowRight /></NavLink>
+                <p className="card-text mb-0 py-3 fs-14">{item.description.slice(0,35)}...</p>
+                <NavLink to={`/ServicesDetail/${item.service_slug}`} className='text-decoration-none fw-medium card-view d-flex align-items-center gap-2'>View Details <FaArrowRight /></NavLink>
               </div>
             </div>
           </div>
